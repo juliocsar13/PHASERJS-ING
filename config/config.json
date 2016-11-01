@@ -1,0 +1,11 @@
+{
+  "postgres": {
+      "username": "vbgctnuyfdgyeq",
+      "password": "aGc81eMYQaUkKJgUO4C4FdhHG5",
+      "database": "d5db6c3vdi3cdu",
+      "host": "ec2-54-163-248-218.compute-1.amazonaws.com",
+      "dialect": "postgres",
+      "secret": "ilovescotchyscotch",
+      "protocol":"postgres"
+  }
+}

@@ -1,0 +1,21 @@
+.modal.fade#modalProfile(role="dialog")
+    .modal-dialog.modal-wide-width
+        .modal-content
+            .modal-header
+                button.close(type='button',data-dismiss='modal') x
+                h3.modal-title PERFIL
+            .modal-body
+                form
+                    .row(style='padding:15px')
+
+                        .col-md-6
+                            .form-group
+                                label.control-label() Nombre de Usuario
+                                input#nick_nameUserLogIn.form-control(type='text',name='nick_name')
+                        .col-md-6
+                            .form-group
+                                label.control-label() Contraseña
+                                input#passwordUserLogIn.form-control(type='text',name='password')
+            .modal-footer
+            
+                button.btn.btn-success.pull-right(type='button',data-dismiss='modal') Aceptar

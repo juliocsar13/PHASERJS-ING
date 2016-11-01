@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 
-var userController = require('../controllers/users')
+var entretenimientoController = require('../controllers/entretenimientoController')
 /* GET users listing. */
 router.route('/')
-    .get(userController.indexView)
+    .get(entretenimientoController.indexView)
 
 module.exports = router;

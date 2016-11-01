@@ -1,0 +1,10 @@
+{
+  "postgres": {
+    "username": "postgres",
+    "password": "123456",
+    "database": "phaser-test",
+    "host": "localhost",
+    "dialect": "postgres",
+    "secret": "ilovescotchyscotch"
+  }
+}

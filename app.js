@@ -5,33 +5,18 @@ var logger        = require('morgan');
 var cookieParser  = require('cookie-parser');
 var bodyParser    = require('body-parser');
 
-var routes        = require('./routes/index');
-
-var app           = express();
-
 var jwt           = require('jsonwebtoken');
 var session       = require('express-session');
-var mongoose      = require('mongoose');
-var MongoStore    = require('connect-mongo')(session);
 var flash         = require('express-flash');
 
-mongoose.connect('mongodb://localhost:27017/phaser-test',function(){
-  console.log("connecting with mongodb")
-})
+var index        = require('./routes/index')
+//})
+var app           = express();
+var models          = require('./models')
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', routes);
-
 
 
 app.use(function(req, res, next) {
@@ -39,7 +24,7 @@ app.use(function(req, res, next) {
   if ('OPTIONS' == req.method) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    res.header('Access-Control-Allow-Headers', '*');
     res.send();
   }
   else {
@@ -47,33 +32,80 @@ app.use(function(req, res, next) {
   }
 
 });
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser('secret'));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 
 app.use(session({
-  secret:'keyboard cat',
-  resave:true,
-  saveUninitialized:false,
-  store: new MongoStore({mongooseConnection:mongoose.connection})
-}))
+  secret: 'keyboard cat',
+  resave: true,
+  name: "connect.sid",
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,
+    secure: true,
+    domain:'http://localhost:3000'
+  }
+
+}));
 
 app.use(flash());
 
 app.use(function(req,res,next){
-  if (req.url != "/login") {
-    if (req.session.token) {
-      req.headers.token = req.session.token;
-    } 
-    if (!req.headers.token) {
-      if(!req.method =="POST") return res.sendStatus(401)
-      return res.redirect('/login')
-    }
-    req.headers.user = jwt.decode(headers.token);
+    console.log('URL D: ',req.url);
+  if (req.url!="/" && req.url!="/nosotros" && req.url!="/contactanos") {
+      console.log('PASA POR AQUI');
+     var authorization_token = req.signedCookies.authorization_token;
+     console.log('PASA POR AQUI',authorization_token);
+
+    if (!authorization_token) return res.redirect('/')
+
+    req.headers.token  = authorization_token;
+    req.headers.user = jwt.decode(authorization_token);
+
   }
   next();
+
+})
+
+models.User.findOne({
+    where:{
+        nick_name:'adelino'
+    }
+
+}).then(function(user){
+
+    if (!user) {
+        models.User.create({
+
+            nick_name      : 'adelino',
+            password : '123456',
+            name     : 'Adelio',
+            lastname : 'Copaja de Agilar',
+            email               : 'adelio_marisol@gmail.com',
+            phone               : '956886883',
+            role                : 'admin',
+            flat                : true
+
+        }).then(function(user){
+            console.log('se creo al usuario con exito')
+        }).catch(function(err){
+        	console.log('hubo un error al crear al usuario',err)
+        })
+    }else{
+        console.log('El usuario ya existe')
+    }
 })
 
 
-
+app.use('/', index);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
