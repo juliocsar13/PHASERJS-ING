@@ -8,7 +8,7 @@ module.exports.checkLogin = function(req,res,next){
 
     jwt.verify(user,secret,function(err,decoded){
         if(err) return res.redirect('/login');
-        
+
         var _user_ = jwt.decode(req.session.user);
 
 

@@ -7,21 +7,17 @@
           span(aria-hidden='true') X
         h2#myModalLabel.modal-title INGRESAR
       .modal-body
-            
         .intro-form
              form
                  .row
                      .col-md-12
                          .form-group
                              label.control-label() USUARIO
-                             input#nick_nameUserLogIn.form-control(type='text',name='nick_name')
+                             input#emailUserLogIn.form-control(type='text',name='email')
                      .col-md-12   
                          .form-group
                              label.control-label() CONTRASEÑA
                              input#passwordUserLogIn.form-control(type='text',name='password')
-    
-               
       .modal-footer
-
             //button.btn.btn-lg.btn-default.btn-large-modal(type='button', data-dismiss='modal') CERRAR
-            button.btn.btn-lg.btn-info.btn-large-modal(type='submit',style='margin-right:35px') INICIAR
+            button#btnLogin.btn.btn-lg.btn-info.btn-large-modal(type='submit',style='margin-right:35px') INICIAR

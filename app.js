@@ -57,13 +57,13 @@ app.use(session({
 }));
 
 app.use(flash());
-
+/*
 app.use(function(req,res,next){
-    console.log('URL D: ',req.url);
+    //console.log('URL D: ',req.url);
   if (req.url!="/" && req.url!="/nosotros" && req.url!="/contactanos") {
-      console.log('PASA POR AQUI');
+      //console.log('PASA POR AQUI');
      var authorization_token = req.signedCookies.authorization_token;
-     console.log('PASA POR AQUI',authorization_token);
+     //console.log('PASA POR AQUI',authorization_token);
 
     if (!authorization_token) return res.redirect('/')
 
@@ -74,10 +74,10 @@ app.use(function(req,res,next){
   next();
 
 })
-
+*/
 models.User.findOne({
     where:{
-        nick_name:'adelino'
+        email:'adelio_marisol@gmail.com'
     }
 
 }).then(function(user){

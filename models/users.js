@@ -10,8 +10,7 @@ module.exports = function(sequelize, DataType) {
             unique:true
         },
         nick_name:{
-                type:DataType.STRING,
-                unique:true
+                type:DataType.STRING
         },
         level:{
                 type:DataType.INTEGER,
@@ -25,13 +24,17 @@ module.exports = function(sequelize, DataType) {
             type: DataType.DATE,
             defaultValue: DataType.NOW
         },
-        id          : DataType.INTEGER,
         sexo        : DataType.STRING,
         password    : DataType.STRING,
         name        : DataType.STRING,
         lastname    : DataType.STRING,
         phone       : DataType.INTEGER,
-        role         : DataType.STRING
+        role        : {
+
+                        type:DataType.STRING,
+                        defaultValue:'costumer'
+        },
+        born        : DataType.STRING
 
     })
 

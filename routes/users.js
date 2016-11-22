@@ -6,5 +6,6 @@ var userController = require('../controllers/users')
 /* GET users listing. */
 router.route('/')
     .get(userController.indexView)
+    .post(userController.createUser)
 
 module.exports = router;

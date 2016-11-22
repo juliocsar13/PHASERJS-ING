@@ -5,6 +5,10 @@ $(function(){
 
     var btnRegister = $('#btnRegister')
     btnRegister.click(signUp)
+
+    var btnContact = $('#btnContact')
+    btnContact.click(SubmitContact)
+
     $("#imgInp").change(function(){
         readURL(this);
     });
@@ -37,7 +41,7 @@ function signIn(){
         url          : 'http://localhost:3000/login',
         data         : data,
         success: function (result) {
-            console.log();
+            //console.log();
             return window.location.pathname = '/entretenimiento'
       }
     })
@@ -45,6 +49,7 @@ function signIn(){
 
 function signUp(){
 
+    var born_  = $('#dayProfile').val() +' '+ $('#monthProfile').val() +' '+ $('#yearProfile').val()
     var data        =    {};
     data.name       =    $('#nameProfile').val()
     data.lastname   =    $('#lastnameProfile').val()
@@ -52,21 +57,45 @@ function signUp(){
     data.sexo       =    $('#sexoProfile').val()
     data.email      =    $('#emailProfile').val()
     data.password   =    $('#passwordProfile').val()
-    data.born       =    $('#bornProfile').val()
+    data.born       =    born_
 
+    console.log('FECHA DE NACIMIENTO',data)
     $.ajax({
 
       type          : 'POST',
       url           : 'http://localhost:3000/usuarios',
       data          : data,
-      dataType      : "json",
-      contentType   : "application/json; charset=utf-8",
 
       success: function (result) {
-
+          $('#ModalRegisterUser').modal('hide');
+      },
+      error: function (req, status, err,res) {
+            if (err) {
+                console.log('el email ya esta registrado')
+            }
       }
     })
 }
+function SubmitContact(){
+    var data = {};
+
+    data.name    = $('#nameContact').val()
+    data.email   = $('#emailContact').val()
+    data.subject = $('#subjectContact').val()
+    data.message = $('#messageContact').val()
+
+    $.ajax({
+        type        : 'POST',
+        url         : 'http://localhost:3000/contactanos',
+        data        : data,
+        success: function (result) {
+
+            console.log('SE REALIZO CON EXITO')
+            //return window.location.pathname = '/contactanos'
+        }
+    })
+}
+
 function getProfile(){
     self = $(this)
 

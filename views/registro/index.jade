@@ -20,41 +20,41 @@
                                 .col-md-6
                                     .form-group
                                         label NOMBRE
-                                        input.form-control(type='text', name='name', required='', placeholder='')
+                                        input#nameProfile.form-control(type='text', name='name', required='')
                                 .col-md-6
                                     .form-group
                                         label APELLIDO
-                                        input.form-control(type='text', name='lastName', required='', placeholder='')
+                                        input#lastnameProfile.form-control(type='text', name='lastname', required='')
                                 .col-md-6    
                                     .form-group
                                         label NOMBRE DE USUARIO
-                                        input.form-control(type='email', name='nick_name', required='', placeholder='')
+                                        input#nick_nameProfile.form-control(type='email', name='nick_name', required='')
                                 .col-md-6
                                     .form-group
                                         label GENERO
-                                        select.form-control(type='tel', name='password', placeholder='')
+                                        select#sexoProfile.form-control(name='genero')
                                             option(value='' disabled selected) Seleccionar genero
                                             option(value='Hombre') Hombre
                                             option(value='Mujer') Mujer
                                 .col-md-6
                                     .form-group
                                         label CONTRASEÑA
-                                        input.form-control(type='tel', name='password', placeholder='')
+                                        input#passwordProfile_.form-control(type='password', name='password')
                                 .col-md-6
                                     .form-group
                                         label REPETIR CONTRASEÑA
-                                        input.form-control(type='tel', name='password', placeholder=' ')
+                                        input#passwordProfile.form-control(type='password', name='password')
                                 
                                 .col-md-6
                                     .form-group
                                         label CORREO
-                                        input.form-control(type='tel', name='email', placeholder='')
+                                        input#emailProfile.form-control(type='email', name='email')
                                 .col-md-6
                                     label FECHA DE NACIMIENTO
                                     .col-md-12(style='padding-left:0px;padding-right:0px')
                                         .col-md-3.col-sm-3.col-xs-3.modal-col-register(style='padding-right:2px')
                                             .form-group
-                                                select.form-control(placeholder='DIA',style='text-align:center;padding-left:15px')
+                                                select#dayProfile.form-control(placeholder='DIA',name='day',style='text-align:center;padding-left:15px')
                                                     option(value='' disabled selected) DIA
                                                     option(value='1') 1
                                                     option(value='2') 2
@@ -89,7 +89,7 @@
                                                     option(value='31') 31
                                         .col-md-5.col-sm-5.col-xs-5.modal-col-register(style='padding-right:2px;padding-left:2px')
                                             .form-group
-                                                select.form-control(type='tel',name='',placeholder='MES',style='text-align:center')
+                                                select#monthProfile.form-control(name='month',placeholder='MES',style='text-align:center')
                                                     option(value='' disabled selected) MES
                                                     option(value='enero') Enero
                                                     option(value='febrero') Febrero
@@ -105,12 +105,8 @@
                                                     option(value='diciembre') Diciembre
                                         .col-md-4.col-sm-4.col-xs-4.modal-col-register(style='padding-left:2px')
                                             .form-group
-                                                input.form-control(type='tel',name='',placeholder='AÑO',style='text-align:center')
-                                    
-
-
-
+                                                input#yearProfile.form-control(name='year',placeholder='AÑO',style='text-align:center',required='')
       .modal-footer
 
             button.btn.btn-lg.btn-default.btn-large-modal(type='button', data-dismiss='modal') CERRAR
-            button.btn.btn-lg.btn-info.btn-large-modal(type='submit',style='margin-right:35px') CREAR CUENTA
+            button#btnRegister.btn.btn-lg.btn-info.btn-large-modal(type='submit',style='margin-right:35px') CREAR CUENTA

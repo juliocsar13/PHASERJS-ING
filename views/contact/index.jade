@@ -1,1 +1,94 @@
 extends ../layout
+
+block content
+    .nicdark_section.nicdark_background_size_cover.nicdark_background_position_center(style='background-image:url(images/boy_bulldoze.jpg);')
+        .nicdark_section.nicdark_bg_greydark_alpha_gradient_2
+        .nicdark_section.nicdark_height_250
+        // start nicdark_container
+    .nicdark_container.nicdark_clearfix
+
+    .nicdark_section.nicdark_height_20
+
+    .intro-form
+        br
+        form(style='margin-left:150px;margin-right:150px;margin-bottom:50px;margin-top:20px')
+            .row
+                .col-md-12
+                    h3(style='padding-left:15px') CONTACTANOS
+                    br
+                    p(style='padding-left:15px;text-align: justify') Para cualquier duda, idea, sugerencia o colaboración, utiliza el siguiente formulario de contacto. Si ves enlaces rotos en alguna página, cosas que crees que se deben mejorar o que te gustaría que se incluyeran en la web, se agradece mucho el interés.
+                    br
+                .col-md-12
+                
+                    .col-md-6
+                        .form-group
+                            input#nameContact.form-control(type='text', name='name', required='',placeholder='Nombre')
+                    .col-md-6
+                        .form-group
+                            input#emailContact.form-control(type='text', name='email', required='',placeholder='Correo')
+                    .col-md-12
+                        .form-group
+                            input#subjectContact.form-control(type='text',required='',placeholder='Asunto')
+                    .col-md-12
+                        .form-group
+                            textarea#messageContact.form-control(type='text',placeholder='Mensaje',rows='5',required='')
+                    .col-md-12
+                        button#btnContact.btn.btn-lg.btn-info.btn-large-modal(style='margin-right:35px') ENVIAR
+
+    
+    .footer-container
+        .row
+            .col-md-4.footer-content-direction.border-right
+                p Direccion
+                img(src='/images/icons/icon-phone-black.svg')
+                | Avenidad Miraflores S/N, Miraflores, Tacna 23000    
+            .col-md-4.footer-content-direction
+                p Telefono
+                img(src='/images/icons/icon-phone-.svg')
+                | 956886883    
+
+            .col-md-4.footer-content-direction.border-left
+                p Correo 
+                img(src='/images/icons/icon-phone-.svg')
+                | julcsar13@gmail.com    
+                    
+
+    .nicdark_section.nicdark_bg_greydark
+        .nicdark_section.nicdark_height_50
+        // start nicdark_container
+        .nicdark_container.nicdark_clearfix
+            .grid.grid_12.nicdark_text_align_center
+                .nicdark_section
+                    a(href='')
+                        img(alt='', width='200', src='/images/logo2.png')
+                .nicdark_section.nicdark_height_20
+                .nicdark_display_inline_block
+                    a(href='')
+                        img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-facebook-circle.svg')
+                    a(href='')
+                        img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-twitter-circle.svg')
+                    a(href='')
+                        img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-pinterest-circle.svg')
+                    a(href='')
+                        img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-linkedin-circle.svg')
+                    a(href='')
+                        img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-youtube-circle.svg')
+        // end container
+        .nicdark_section.nicdark_height_50
+    .nicdark_section.nicdark_bg_greydark
+        // start nicdark_container
+        .nicdark_container.nicdark_clearfix.nicdark_border_top_1_solid_greydark
+            .grid.grid_6.nicdark_text_align_center_responsive
+                p.nicdark_color_grey.nicdark_font_size_14 © Copyright 2016 Se Declaran Todos los Derechos Reservados Compañia J&C
+            .grid.grid_6.nicdark_text_align_right.nicdark_text_align_center_responsive.nicdark_border_top_1_solid_greydark_responsive.nicdark_display_none_all_iphone
+                .nicdark_navigation_copyright
+                    ul
+                        li
+                            a(href='/') INICIO
+                        li
+                            a(href='/nosotros') NOSOTROS
+                        li
+                            a(href='/contactanos') CONTACTANOS
+        // end container
+
+                    

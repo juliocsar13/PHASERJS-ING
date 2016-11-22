@@ -31,7 +31,7 @@ router.route('/nosotros')
 
 router.route('/contactanos')
     .get(contactController.indexView)
-    .post(contactController.sendContact)
+    .post(contactController.createComent)
 
 
 module.exports = router;
