@@ -41,7 +41,7 @@ function signIn(){
         url          : 'http://localhost:3000/login',
         data         : data,
         success: function (result) {
-            //console.log();
+            console.log("HOLA",result);
             return window.location.pathname = '/entretenimiento'
       }
     })

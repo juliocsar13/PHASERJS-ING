@@ -12,7 +12,7 @@ var flash         = require('express-flash');
 var index        = require('./routes/index')
 //})
 var app           = express();
-var models          = require('./models')
+var models        = require('./models')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -41,8 +41,6 @@ app.use(cookieParser('secret'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
-
 app.use(session({
   secret: 'keyboard cat',
   resave: true,
@@ -57,13 +55,13 @@ app.use(session({
 }));
 
 app.use(flash());
-/*
+
 app.use(function(req,res,next){
     //console.log('URL D: ',req.url);
   if (req.url!="/" && req.url!="/nosotros" && req.url!="/contactanos") {
-      //console.log('PASA POR AQUI');
+     console.log('PASA POR AQUI');
      var authorization_token = req.signedCookies.authorization_token;
-     //console.log('PASA POR AQUI',authorization_token);
+     console.log('PASA POR AQUI',authorization_token);
 
     if (!authorization_token) return res.redirect('/')
 
@@ -74,7 +72,7 @@ app.use(function(req,res,next){
   next();
 
 })
-*/
+
 models.User.findOne({
     where:{
         email:'adelio_marisol@gmail.com'

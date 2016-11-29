@@ -3,8 +3,8 @@ var jwt    = require('jsonwebtoken')
 var config = require('../config/config_localhost')
 
 
-module.exports.SignIn = function(req,res){
-
+module.exports.login = function(req,res){
+    console.log('HOLA d:',req.body);
     models.User.findOne({
 
         where:{
@@ -15,19 +15,16 @@ module.exports.SignIn = function(req,res){
     }).then(function(user){
 
         if(user){
-
+            console.log("hola mundo");
             var user = JSON.stringify(user)
             var token = jwt.sign(user,config.postgres.secret);
 
+            console.log("ANTES DE GURADAR EN LA COOKIE",token);
             var _token_  = jwt.decode(token)
-
-
 
             var flat = _token_.flat;
 
-
-
-            if (!flat) return res.redirect('/login')
+            if (!flat) return res.redirect('/')
             res.cookie('authorization_token', token, {signed: true });
             res.redirect('/entretenimiento');
 
