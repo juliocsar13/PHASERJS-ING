@@ -66,9 +66,12 @@ app.use(function(req,res,next){
     if (!authorization_token) return res.redirect('/')
 
     req.headers.token  = authorization_token;
-    req.headers.user = jwt.decode(authorization_token);
+    req.headers.user   = jwt.decode(authorization_token);
 
   }
+  /*if (req.url="http://localhost:3000/?lang=es") {
+      res.render('/intermedio')
+  }*/
   next();
 
 })
@@ -83,10 +86,10 @@ models.User.findOne({
     if (!user) {
         models.User.create({
 
-            nick_name      : 'adelino',
-            password : '123456',
-            name     : 'Adelio',
-            lastname : 'Copaja de Agilar',
+            nick_name           : 'adelino',
+            password            : '123456',
+            name                : 'Adelio',
+            lastname            : 'Copaja de Agilar',
             email               : 'adelio_marisol@gmail.com',
             phone               : '956886883',
             role                : 'admin',

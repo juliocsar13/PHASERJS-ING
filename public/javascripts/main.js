@@ -8,12 +8,60 @@ $(function(){
 
     var btnContact = $('#btnContact')
     btnContact.click(SubmitContact)
+/*
+    var btnBasicoSuscripcion = $('#btnBasicoSuscripcion')
+    btnBasicoSuscripcion.click(AddSuscripcionBasic)
 
+    var btnIntermedioSuscripcion = $('#btnIntermedioSuscripcion')
+    btnIntermedioSuscripcion.click(AddSuscripcionIntermedio)
+
+    var btnAvanzadoSuscripcion = $('#btnAvanzadoSuscripcion')
+    btnAvanzadoSuscripcion.click(AddSuscripcionAvanzado)
+*/
     $("#imgInp").change(function(){
         readURL(this);
     });
 
 })
+
+function AddSuscripcionBasic(){
+
+        $.ajax({
+            type         : 'POST',
+            url          : 'http://localhost:3000/login',
+            data         : data,
+            success: function (result) {
+                console.log("HOLA",result);
+                return window.location.pathname = '/entretenimiento'
+          }
+        })
+}
+function AddSuscripcionIntermedio(){
+
+        $.ajax({
+            type         : 'POST',
+            url          : 'http://localhost:3000/login',
+            data         : data,
+            success: function (result) {
+                console.log("HOLA",result);
+                return window.location.pathname = '/entretenimiento'
+          }
+        })
+}
+function AddSuscripcionAvanzado(){
+
+        $.ajax({
+            type         : 'POST',
+            url          : 'http://localhost:3000/login',
+            data         : data,
+            success: function (result) {
+                console.log("HOLA",result);
+                return window.location.pathname = '/entretenimiento'
+          }
+        })
+}
+
+
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
