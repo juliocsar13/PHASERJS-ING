@@ -4,7 +4,7 @@ var config = require('../config/config_localhost')
 
 
 module.exports.login = function(req,res){
-    console.log('HOLA d:',req.body);
+    //console.log('HOLA d:',req.body);
     models.User.findOne({
 
         where:{
@@ -15,11 +15,11 @@ module.exports.login = function(req,res){
     }).then(function(user){
 
         if(user){
-            console.log("hola mundo");
+            //console.log("hola mundo");
             var user = JSON.stringify(user)
             var token = jwt.sign(user,config.postgres.secret);
 
-            console.log("ANTES DE GURADAR EN LA COOKIE",token);
+            //console.log("ANTES DE GURADAR EN LA COOKIE",token);
             var _token_  = jwt.decode(token)
 
             var flat = _token_.flat;

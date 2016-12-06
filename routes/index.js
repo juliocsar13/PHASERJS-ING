@@ -19,14 +19,13 @@ var config            = require('../config/config_localhost')
 router.route('/')
     .get(loginController.indexView)
 
-router.use('/entretenimiento',entretenimiento)
+router.use('/entretenimiento',middleware.checkLogin,entretenimiento)
 router.use('/usuarios',users)
-router.use('/basico',basic)
-router.use('/intermedio',intermediate)
-router.use('/avanzado',advanced)
+router.use('/basico',middleware.checkLogin,basic)
+router.use('/intermedio',middleware.checkLogin,intermediate)
+router.use('/avanzado',middleware.checkLogin,advanced)
 
 router.post('/login',function(req,res){
-    console.log("PASANDO POR EL LOGIN:");
     models.User.findOne({
 
         where:{
@@ -66,9 +65,9 @@ router.route('/contactanos')
     .get(contactController.indexView)
     .post(contactController.createComent)
 
-    router.get('/logout',function(req,res){
-        req.headers.token = null;
-        res.clearCookie('authorization_token');
-        res.redirect('/')
-    })
+router.get('/logout',function(req,res){
+    req.headers.token = null;
+    res.clearCookie('authorization_token');
+    res.redirect('/')
+})
 module.exports = router;

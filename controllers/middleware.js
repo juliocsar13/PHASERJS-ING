@@ -8,7 +8,7 @@ module.exports.checkLogin = function(req,res,next){
 
     if (!user) return res.redirect('/');
     console.log("DATOS DEL USUARIO",user);
-
+    console.log("TOKEN",token);
     jwt.verify( token, secret, function(err,decoded){
         if(err) return res.redirect('/login');
 

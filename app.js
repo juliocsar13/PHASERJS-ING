@@ -59,9 +59,9 @@ app.use(flash());
 app.use(function(req,res,next){
     //console.log('URL D: ',req.url);
   if (req.url!="/" && req.url!="/nosotros" && req.url!="/contactanos") {
-     console.log('PASA POR AQUI');
+     //console.log('PASA POR AQUI');
      var authorization_token = req.signedCookies.authorization_token;
-     console.log('PASA POR AQUI',authorization_token);
+     //console.log('PASA POR AQUI',authorization_token);
 
     if (!authorization_token) return res.redirect('/')
 
@@ -78,7 +78,7 @@ app.use(function(req,res,next){
 
 models.User.findOne({
     where:{
-        email:'adelio_marisol@gmail.com'
+        email:'julcsar13@gmail.com'
     }
 
 }).then(function(user){
@@ -86,13 +86,13 @@ models.User.findOne({
     if (!user) {
         models.User.create({
 
-            nick_name           : 'adelino',
+            nick_name           : 'julito',
             password            : '123456',
-            name                : 'Adelio',
-            lastname            : 'Copaja de Agilar',
-            email               : 'adelio_marisol@gmail.com',
+            name                : 'Julio',
+            lastname            : 'Pari',
+            email               : 'julcsar13@gmail.com',
             phone               : '956886883',
-            role                : 'admin',
+            role                : 'costumer',
             flat                : true
 
         }).then(function(user){
