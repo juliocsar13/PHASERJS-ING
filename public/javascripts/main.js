@@ -86,7 +86,7 @@ function signIn(){
 
     $.ajax({
         type         : 'POST',
-        url          : '/login',
+        url          : 'http://localhost:3000/login',
         data         : data,
         success: function (result) {
             console.log("HOLA",result);
