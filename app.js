@@ -18,7 +18,7 @@ var models        = require('./models')
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-/*
+
 app.use(function(req, res, next) {
 
   if ('OPTIONS' == req.method) {
@@ -31,7 +31,7 @@ app.use(function(req, res, next) {
     next();
   }
 
-});*/
+});
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -49,39 +49,38 @@ app.use(session({
   cookie: {
     httpOnly: true,
     secure: true,
-    domain:'http://localhost:3000'
+    domain:'http://localhost:3000/'
   }
 
 }));
 
 app.use(flash());
 
+/*
 app.use(function(req,res,next){
     //console.log('URL D: ',req.url);
   if (req.url!="/" && req.url!="/nosotros" && req.url!="/contactanos") {
-     //console.log('PASA POR AQUI');
+     console.log('PASA POR AQUI');
      var authorization_token = req.signedCookies.authorization_token;
-     //console.log('PASA POR AQUI',authorization_token);
+     console.log('PASA POR AQUI',authorization_token);
 
     if (!authorization_token) return res.redirect('/')
-
     req.headers.token  = authorization_token;
     req.headers.user   = jwt.decode(authorization_token);
 
   }
-  /*if (req.url="http://localhost:3000/?lang=es") {
-      res.render('/intermedio')
-  }*/
+  console.log("AHORA NO FUNCIONA d:");
   next();
 
 })
+*/
 
 models.User.findOne({
-    where:{
-        email:'julcsar13@gmail.com'
-    }
+        where:{
+            email:'julcsar13@gmail.com'
+        }
 
-}).then(function(user){
+    }).then(function(user){
 
     if (!user) {
         models.User.create({

@@ -3,7 +3,7 @@
 (function() {
   // Application path.
   var appName = location.pathname.match(/\/([-\w]+)(\.jade)?$/);
-  appName = appName ? appName[1].replace('-', '/') : 'basic';
+  appName = appName ? appName[1].replace('-', '/') : 'index';
 
   // Only one language.
   var lang = 'es';
