@@ -107,6 +107,9 @@ function signUp(){
     data.password   =    $('#passwordProfile').val()
     data.born       =    born_
 
+
+
+
     console.log('FECHA DE NACIMIENTO',data)
     $.ajax({
 
