@@ -86,7 +86,7 @@ function signIn(){
 
     $.ajax({
         type         : 'POST',
-        url          : 'https://funncode.herokuapp.com/login',
+        url          : '/login',
         data         : data,
         success: function (result) {
             console.log("HOLA",result);
