@@ -1,11 +1,11 @@
 $(function(){
 
-    /*var btnLogin = $('#btnLogin')
+    var btnLogin = $('#btnLogin')
     btnLogin.click(signIn)
-*/
-    /*var btnRegister = $('#btnRegister')
+
+    var btnRegister = $('#btnRegister')
     btnRegister.click(signUp)
-*/
+
     var btnContact = $('#btnContact')
     btnContact.click(SubmitContact)
 /*
@@ -86,7 +86,7 @@ function signIn(){
 
     $.ajax({
         type         : 'POST',
-        url          : 'http://localhost:3000/login',
+        url          : 'https://funncode.herokuapp.com/login',
         data         : data,
         success: function (result) {
             console.log("HOLA",result);
