@@ -1,11 +1,11 @@
 $(function(){
 
-    var btnLogin = $('#btnLogin')
+    /*var btnLogin = $('#btnLogin')
     btnLogin.click(signIn)
-
-    var btnRegister = $('#btnRegister')
+*/
+    /*var btnRegister = $('#btnRegister')
     btnRegister.click(signUp)
-
+*/
     var btnContact = $('#btnContact')
     btnContact.click(SubmitContact)
 /*
