@@ -19,11 +19,11 @@ var config            = require('../config/config_localhost')
 router.route('/')
     .get(loginController.indexView)
 
-router.use('/entretenimiento',middleware.checkLogin,entretenimiento)
+router.use('/entretenimiento',entretenimiento)
 router.use('/usuarios',users)
-router.use('/basico',middleware.checkLogin,basic)
-router.use('/intermedio',middleware.checkLogin,intermediate)
-router.use('/avanzado',middleware.checkLogin,advanced)
+router.use('/basico',basic)
+router.use('/intermedio',intermediate)
+router.use('/avanzado',advanced)
 
 router.post('/login',function(req,res){
     models.User.findOne({
