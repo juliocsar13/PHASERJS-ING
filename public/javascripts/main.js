@@ -86,10 +86,10 @@ function signIn(){
 
     $.ajax({
         type         : 'POST',
-        url          : 'http://localhost:3000/login',
+        url          : '/login',
         data         : data,
         success: function (result) {
-            console.log("HOLA",result);
+            console.log("HOLA",window.location.pathname);
             return window.location.pathname = '/entretenimiento'
       }
     })
@@ -114,7 +114,7 @@ function signUp(){
     $.ajax({
 
       type          : 'POST',
-      url           : 'http://localhost:3000/usuarios',
+      url           : '/usuarios',
       data          : data,
 
       success: function (result) {
