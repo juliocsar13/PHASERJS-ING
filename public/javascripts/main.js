@@ -84,13 +84,14 @@ function signIn(){
 
     var data_submit = JSON.stringify(data)
     console.log(data_submit);
-    /*
+
     $.post('/login' , data_submit)
         .done(function(result){
             console.log("HOLA MUNDO");
             return window.location.pathname = '/entretenimiento'
-        })*/
+        })
         //return window.location.pathname = '/entrete'
+
     $.ajax({
         type         : 'POST',
         url          : 'https://funncode.herokuapp.com/login',
@@ -99,13 +100,8 @@ function signIn(){
             console.log("HOLA",window.location.pathname);
             return window.location.pathname = '/entretenimiento'
 
-      },
-      error: function (req, status, err,res) {
-            if (err) {
-                console.log(err);
-            }
       }
-  })
+  })*/
 }
 
 function signUp(){
