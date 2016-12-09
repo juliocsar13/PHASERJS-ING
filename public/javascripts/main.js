@@ -91,7 +91,7 @@ function signIn(){
             return window.location.pathname = '/entretenimiento'
         })
         //return window.location.pathname = '/entrete'
-
+/*
     $.ajax({
         type         : 'POST',
         url          : 'https://funncode.herokuapp.com/login',
