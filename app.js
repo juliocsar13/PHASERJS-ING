@@ -58,7 +58,13 @@ app.use(flash());
 
 app.use(function(req,res,next){
   console.log('URL ',req.url);
-  if (req.url!="/" && req.url!="/nosotros" && req.url!="/contactanos" && req.url!="/stylesheets/bootstrap.min.css.map" && req.url!="/login") {
+  if (req.url!="/" && req.url!="/nosotros"
+                   && req.url!="/contactanos"
+                   && req.url!="/stylesheets/bootstrap.min.css.map"
+                   && req.url!="/login"
+                   && req.url!="/usuarios"
+                   && req.url!="/contactanos") {
+                       
      console.log('PASA POR AQUI');
      var authorization_token = req.signedCookies.authorization_token;
      console.log('PASA POR AQUI',authorization_token);

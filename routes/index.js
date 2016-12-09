@@ -46,40 +46,4 @@ router.get('/logout',function(req,res){
     res.redirect('/')
 })
 
-/*
-router.post('/login',function(req,res){
-    console.log('PASANDO POR EL LOGIN D:');
-    models.User.findOne({
-
-        where:{
-            email:req.body.email,
-            password:req.body.password
-        }
-
-    }).then(function(user){
-
-        if(user){
-            console.log("hola mundo");
-            var user = JSON.stringify(user)
-            var token = jwt.sign(user,config.postgres.secret);
-
-            console.log("ANTES DE GURADAR EN LA COOKIE",token);
-            var _token_  = jwt.decode(token)
-
-            var flat = _token_.flat;
-            console.log(flat);
-            if (!flat) return res.redirect('/')
-            console.log("GUARDANDO COOKIE");
-            res.cookie('authorization_token', token, {signed: true });
-            console.log("redireccionando a entretenimiento");
-            res.redirect('/entretenimiento');
-
-        }
-    })
-})
-
-*/
-
-
-
 module.exports = router;

@@ -82,25 +82,26 @@ function signIn(){
     data.email     = $('#emailUserLogIn').val();
     data.password  = $('#passwordUserLogIn').val();
 
-
+    /*
     $.post('/login' , data)
         .done(function(result){
             console.log("HOLA MUNDO");
             return window.location.pathname = '/entretenimiento'
         })
-
+*/
         //return window.location.pathname = '/entretenimiento'
-/*
+
     $.ajax({
         type         : 'POST',
         url          : 'https://funncode.herokuapp.com/login',
         data         :  data,
         success: function (result) {
-            console.log("HOLA",window.location.pathname);
+
             return window.location.pathname = '/entretenimiento'
 
       }
-  })*/
+  })
+
 }
 
 function signUp(){
