@@ -5,6 +5,7 @@ var config = require('../config/config_localhost')
 
 module.exports.login = function(req,res){
     console.log('HOLA',req.body);
+    console.log('PASANDO POR EL LOGIN CONTROLLERS');
     models.User.findOne({
 
         where:{

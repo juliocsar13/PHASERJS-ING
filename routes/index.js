@@ -16,11 +16,35 @@ var middleware        = require('../controllers/middleware')
 var models            = require('../models')
 var config            = require('../config/config_localhost')
 
-/*
-router.route('/login')
-    .get(loginController.login)
-*/
 
+router.route('/login')
+    .post(loginController.login)
+
+router.use('/entretenimiento',middleware.checkLogin,entretenimiento)
+router.use('/usuarios',middleware.checkLogin,users)
+router.use('/basico',middleware.checkLogin,basic)
+router.use('/intermedio',middleware.checkLogin,intermediate)
+router.use('/avanzado',middleware.checkLogin,advanced)
+
+
+router.route('/')
+    .get(loginController.indexView)
+
+
+router.route('/nosotros')
+    .get(thenController.indexView)
+
+router.route('/contactanos')
+    .get(contactController.indexView)
+    .post(contactController.createComent)
+
+router.get('/logout',function(req,res){
+    req.headers.token = null;
+    res.clearCookie('authorization_token');
+    res.redirect('/')
+})
+
+/*
 router.post('/login',function(req,res){
     console.log('PASANDO POR EL LOGIN D:');
     models.User.findOne({
@@ -52,29 +76,7 @@ router.post('/login',function(req,res){
     })
 })
 
-
-router.route('/')
-    .get(loginController.indexView)
-
-
-router.route('/nosotros')
-    .get(thenController.indexView)
-
-router.route('/contactanos')
-    .get(contactController.indexView)
-    .post(contactController.createComent)
-
-router.get('/logout',function(req,res){
-    req.headers.token = null;
-    res.clearCookie('authorization_token');
-    res.redirect('/')
-})
-router.use('/entretenimiento',middleware.checkLogin,entretenimiento)
-router.use('/usuarios',middleware.checkLogin,users)
-router.use('/basico',middleware.checkLogin,basic)
-router.use('/intermedio',middleware.checkLogin,intermediate)
-router.use('/avanzado',middleware.checkLogin,advanced)
-
+*/
 
 
 
