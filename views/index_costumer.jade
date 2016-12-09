@@ -1,5 +1,43 @@
 extends layout
 
+
+block login 
+
+    .nicdark_container.nicdark_clearfix
+      .grid.grid_6.nicdark_padding_botttom_10.nicdark_padding_top_10.nicdark_text_align_center_responsive
+            .nicdark_navigation_top_header_2
+                ul
+                    li
+                        ul.nicdark_sub_menu
+                            li
+                                a(target='_blank', href='https://www.facebook.com/') Facebook
+                            li
+                                a(target='_blank', href='https://dribbble.com/') Dribbble
+                            li
+                                a(target='_blank', href='https://twitter.com/') Twitter
+                            li
+                                a(target='_blank', href='https://www.instagram.com//') Instagram
+                            li
+                                a(target='_blank', href='https://www.behance.net/') Behance
+                        a(target='_blank', href='https://www.facebook.com/')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-facebook-grey.svg')
+                        a(target='_blank', href='https://twitter.com/')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-twitter-grey.svg')
+                        a(target='_blank', href='#')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-linkedin-grey.svg')
+                        a(target='_blank', href='#')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-pinterest-grey.svg')
+                        a(target='_blank', href='')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-instagram-grey.svg')
+      .grid.grid_6.nicdark_text_align_right.nicdark_border_top_1_solid_greydark_responsive.nicdark_text_align_center_responsive.nicdark_padding_botttom_10.nicdark_padding_top_10
+        .nicdark_navigation_top_header_2
+          ul
+            li
+              img.nicdark_margin_right_10.nicdark_float_left(alt='', width='15', src='/images/icons/icon-user-grey.svg')
+              a(href='#') 
+              span(style='color:white') #{userCurrent}
+            
+
 block content_title
     .nicdark_width_50_percentage.nicdark_width_100_percentage_all_iphone.nicdark_float_left
       strong.nicdark_color_white.nicdark_font_size_40.nicdark_first_font Bienvenido 
@@ -22,7 +60,7 @@ block content
                     .nicdark_section.nicdark_border_1_solid_grey
                       // image
                       .nicdark_section.nicdark_position_relative
-                        img.nicdark_section(alt='', src='/images/secuen2.jpg')
+                        img.nicdark_section(alt='', src='images/partner/0.jpg')
                         .nicdark_bg_greydark_alpha_gradient_2.nicdark_position_absolute.nicdark_left_0.nicdark_height_100_percentage.nicdark_width_100_percentage.nicdark_padding_20.nicdark_box_sizing_border_box
                         
                           .nicdark_position_absolute.nicdark_bottom_20
@@ -39,21 +77,21 @@ block content
                             | Es el curso perfecto para iniciarse en el mundo de la programacion. Esta orientada a niños y jovenes creativos con imaginacion y a las que les guste la tecnologia
                             | Podran a través de pseudocodigo aprender a crear estructuras secuenciales, repetitivas.
                       .nicdark_section.nicdark_padding_20.nicdark_box_sizing_border_box.nicdark_bg_grey.nicdark_border_top_1_solid_grey
-                        .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_display_none_all_iphone.nicdark_float_left
+                        .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left
                           .nicdark_display_table.nicdark_float_left
                             img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_border_radius_100_percentage(alt='', width='25', src='images/icons/icon-comments.svg')
                             p.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_font_size_15
                               a(href='/entretenimiento/informacion_nivel_basico') Ver Detalle
                         
                         .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left.nicdark_text_align_right
-                          a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='/basico') IR
+                          a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='/basico') JUGAR
                 .nicdark_width_33_percentage.nicdark_width_100_percentage_responsive.nicdark_float_left.card-1
                     .nicdark_section.nicdark_padding_15.nicdark_box_sizing_border_box
                       // start preview
                       .nicdark_section.nicdark_border_1_solid_grey
                         // image
                         .nicdark_section.nicdark_position_relative
-                          img.nicdark_section(alt='', src='/images/secuen2.jpg')
+                          img.nicdark_section(alt='', src='images/partner/img1.png')
                           .nicdark_bg_greydark_alpha_gradient_2.nicdark_position_absolute.nicdark_left_0.nicdark_height_100_percentage.nicdark_width_100_percentage.nicdark_padding_20.nicdark_box_sizing_border_box
                             
                             .nicdark_position_absolute.nicdark_bottom_20
@@ -72,14 +110,14 @@ block content
                               br
                               | Podran a través de pseudocodigo aprender a crear funciones. A través de un video juego que ejecutara las instrucciones escritas.
                         .nicdark_section.nicdark_padding_20.nicdark_box_sizing_border_box.nicdark_bg_grey.nicdark_border_top_1_solid_grey
-                          .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_display_none_all_iphone.nicdark_float_left
+                          .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left
                             .nicdark_display_table.nicdark_float_left
                               img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_border_radius_100_percentage(alt='', width='25', src='images/icons/icon-comments.svg')
                               p.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_font_size_15
                                 a(href='/entretenimiento/informacion_nivel_intermedio') Ver Detalle
                          
                           .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left.nicdark_text_align_right
-                            a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='/Intermedio') IR
+                            a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='/Intermedio') JUGAR
                 .nicdark_width_33_percentage.nicdark_width_100_percentage_responsive.nicdark_float_left.card-1
                 
                  
@@ -88,7 +126,7 @@ block content
                     .nicdark_section.nicdark_border_1_solid_grey
                       // image
                       .nicdark_section.nicdark_position_relative
-                        img.nicdark_section(alt='', src='/images/secuen2.jpg')
+                        img.nicdark_section(alt='', src='images/partner/img2.png')
                         .nicdark_bg_greydark_alpha_gradient_2.nicdark_position_absolute.nicdark_left_0.nicdark_height_100_percentage.nicdark_width_100_percentage.nicdark_padding_20.nicdark_box_sizing_border_box
                           
                           .nicdark_position_absolute.nicdark_bottom_20
@@ -106,14 +144,14 @@ block content
                             br
                             | Donde se desarrollaran las siguientes temas.
                       .nicdark_section.nicdark_padding_20.nicdark_box_sizing_border_box.nicdark_bg_grey.nicdark_border_top_1_solid_grey
-                        .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_display_none_all_iphone.nicdark_float_left
+                        .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left
                           .nicdark_display_table.nicdark_float_left
                             img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_border_radius_100_percentage(alt='', width='25', src='images/icons/icon-comments.svg')
                             p.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_font_size_15
                               a(href='/entretenimiento/informacion_nivel_avanzado') Ver Detalle
                         
                         .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left.nicdark_text_align_right
-                          a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='/avanzado') IR
+                          a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='/avanzado') JUGAR
                 
         .nicdark_section.nicdark_height_50
         .nicdark_section.nicdark_height_50

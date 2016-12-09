@@ -93,7 +93,7 @@ function signIn(){
         //return window.location.pathname = '/entrete'
     $.ajax({
         type         : 'POST',
-        url          : '/login',
+        url          : 'https://funncode.herokuapp.com/login',
         data         :  data,
         success: function (result) {
             console.log("HOLA",window.location.pathname);
@@ -127,7 +127,7 @@ function signUp(){
     $.ajax({
 
       type          : 'POST',
-      url           : '/usuarios',
+      url           : 'https://funncode.herokuapp.com/usuarios',
       data          : data,
 
       success: function (result) {
@@ -150,7 +150,7 @@ function SubmitContact(){
 
     $.ajax({
         type        : 'POST',
-        url         : '/contactanos',
+        url         : 'https://funncode.herokuapp.com/contactanos',
         data        : data,
         success: function (result) {
 
@@ -167,7 +167,7 @@ function getProfile(){
 
     $.ajax({
         type        : 'GET'+id,
-        url         : '/usuarios',
+        url         : 'https://funncode.herokuapp.com/usuarios',
         data        : data,
         success: function (result) {
 
@@ -197,7 +197,7 @@ function SubmitProfile(){
 
     $.ajax({
         type        : 'POST',
-        url         : '/usuarios',
+        url         : 'https://funncode.herokuapp.com/usuarios',
         data        :  data,
         success:function(result){
 

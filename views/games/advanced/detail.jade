@@ -1,5 +1,44 @@
 extends ../../layout
 
+
+block login 
+
+
+    .nicdark_container.nicdark_clearfix
+      .grid.grid_6.nicdark_padding_botttom_10.nicdark_padding_top_10.nicdark_text_align_center_responsive
+            .nicdark_navigation_top_header_2
+                ul
+                    li
+                        ul.nicdark_sub_menu
+                            li
+                                a(target='_blank', href='https://www.facebook.com/') Facebook
+                            li
+                                a(target='_blank', href='https://dribbble.com/') Dribbble
+                            li
+                                a(target='_blank', href='https://twitter.com/') Twitter
+                            li
+                                a(target='_blank', href='https://www.instagram.com//') Instagram
+                            li
+                                a(target='_blank', href='https://www.behance.net/') Behance
+                        a(target='_blank', href='https://www.facebook.com/')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-facebook-grey.svg')
+                        a(target='_blank', href='https://twitter.com/')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-twitter-grey.svg')
+                        a(target='_blank', href='#')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-linkedin-grey.svg')
+                        a(target='_blank', href='#')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-pinterest-grey.svg')
+                        a(target='_blank', href='')
+                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-instagram-grey.svg')
+      .grid.grid_6.nicdark_text_align_right.nicdark_border_top_1_solid_greydark_responsive.nicdark_text_align_center_responsive.nicdark_padding_botttom_10.nicdark_padding_top_10
+        .nicdark_navigation_top_header_2
+          ul
+            li
+              img.nicdark_margin_right_10.nicdark_float_left(alt='', width='15', src='/images/icons/icon-user-grey.svg')
+              a(href='#') 
+              span(style='color:white') #{userCurrent}
+            
+
 block content_title
     .nicdark_width_50_percentage.nicdark_width_100_percentage_all_iphone.nicdark_float_left
       strong.nicdark_color_white.nicdark_font_size_40.nicdark_first_font Nivel Avanzado 
