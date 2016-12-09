@@ -9,6 +9,8 @@ router.route('/')
 
 router.route('/informacion_nivel_basico')
     .get(entretenimientoController.indexViewDetailBasic)
+router.route('/informacion_nivel_basico/conceptos')
+    .get(entretenimientoController.indexConceptos)
 
 router.route('/informacion_nivel_intermedio')
     .get(entretenimientoController.indexViewDetailIntermedio)

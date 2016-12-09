@@ -17,3 +17,7 @@ module.exports.indexViewDetailIntermedio = function(req,res){
 module.exports.indexViewDetailAdvance = function(req,res){
     res.render('games/advanced/detail')
 }
+
+module.exports.indexConceptos = function(req,res){
+    res.render('games/basic/conceptos')
+}
