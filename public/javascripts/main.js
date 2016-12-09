@@ -94,7 +94,7 @@ function signIn(){
     $.ajax({
         type         : 'POST',
         url          : 'http://localhost:3000/login/',
-        data         : data_submit,
+        data         :  data,
         success: function (result) {
             console.log("HOLA",window.location.pathname);
             return window.location.pathname = '/entretenimiento'

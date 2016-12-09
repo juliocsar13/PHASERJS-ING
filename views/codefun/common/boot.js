@@ -10,6 +10,9 @@
   window['BlocklyGamesLanguages'] = [lang];
   window['BlocklyGamesLang'] = lang;
 
+
+
+
   // Load the language pack.
   var script = document.createElement('script');
   script.src = appName + '/generated/' + lang + '/compressed-indent.js';

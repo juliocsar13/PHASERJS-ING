@@ -6,3 +6,14 @@ module.exports.indexView = function(req,res){
         res.render('index_costumer')
     }
 }
+module.exports.indexViewDetailBasic = function(req,res){
+    res.render('games/basic/detail')
+}
+
+module.exports.indexViewDetailIntermedio = function(req,res){
+    res.render('games/intermediate/detail')
+}
+
+module.exports.indexViewDetailAdvance = function(req,res){
+    res.render('games/advanced/detail')
+}

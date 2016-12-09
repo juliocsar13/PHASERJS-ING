@@ -11,17 +11,11 @@ var jwt               = require('jsonwebtoken')
 var contactController = require('../controllers/contactController')
 var thenController    = require('../controllers/thenController')
 var loginController   = require('../controllers/loginController')
-//var middleware        = require('../controllers/middleware')
+var middleware        = require('../controllers/middleware')
 
 var models            = require('../models')
 var config            = require('../config/config_localhost')
 
-router.route('/')
-    .get(loginController.indexView)
-/*
-router.route('/login')
-    .post(loginController.login)
-*/
 
 router.post('/login',function(req,res){
     console.log('PASANDO POR EL LOGIN D:');
@@ -51,6 +45,9 @@ router.post('/login',function(req,res){
         }
     })
 })
+router.route('/')
+    .get(loginController.indexView)
+
 
 router.route('/nosotros')
     .get(thenController.indexView)
@@ -64,11 +61,11 @@ router.get('/logout',function(req,res){
     res.clearCookie('authorization_token');
     res.redirect('/')
 })
-router.use('/entretenimiento',entretenimiento)
-router.use('/usuarios',users)
-router.use('/basico',basic)
-router.use('/intermedio',intermediate)
-router.use('/avanzado',advanced)
+router.use('/entretenimiento',middleware.checkLogin,entretenimiento)
+router.use('/usuarios',middleware.checkLogin,users)
+router.use('/basico',middleware.checkLogin,basic)
+router.use('/intermedio',middleware.checkLogin,intermediate)
+router.use('/avanzado',middleware.checkLogin,advanced)
 
 
 

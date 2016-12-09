@@ -1,3 +1,3 @@
 module.exports.indexView = function(req,res){
-    res.render('codefun/pond-tutor.jade')
+    res.render('codefun/pond_tutor')
 }

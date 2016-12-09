@@ -1,16 +1,20 @@
 extends layout
 
+block content_title
+    .nicdark_width_50_percentage.nicdark_width_100_percentage_all_iphone.nicdark_float_left
+      strong.nicdark_color_white.nicdark_font_size_40.nicdark_first_font Bienvenido 
+      .nicdark_section.nicdark_height_20
+      
+      .nicdark_section.nicdark_height_20
 block content
     .nicdark_section
+        
+    
+        .nicdark_section.nicdark_height_50
+        .nicdark_section.nicdark_height_50
+        
         .nicdark_container.nicdark_clearfix
-            .grid.grid_12
-                //-h1.nicdark_font_size_50
-                    //-strong 
-                        //-| Nuestros Cursos
-                //-.nicdark_section.nicdark_height_10
-                    //-h3.nicdark_color_grey
-                    //-| Lo mejor de la programacion
-        .nicdark_container.nicdark_clearfix
+        
             .nicdark_width_100_percentage
                 .nicdark_width_33_percentage.nicdark_width_100_percentage_responsive.nicdark_float_left.card-1
                   .nicdark_section.nicdark_padding_15.nicdark_box_sizing_border_box
@@ -20,10 +24,7 @@ block content
                       .nicdark_section.nicdark_position_relative
                         img.nicdark_section(alt='', src='/images/secuen2.jpg')
                         .nicdark_bg_greydark_alpha_gradient_2.nicdark_position_absolute.nicdark_left_0.nicdark_height_100_percentage.nicdark_width_100_percentage.nicdark_padding_20.nicdark_box_sizing_border_box
-                          a.nicdark_tooltip_jquery.nicdark_position_absolute.nicdark_right_0(title='Add To Favorities', href='#')
-                            img.nicdark_margin_right_60(alt='', width='25', src='images/icons/icon-heart-white.svg')
-                          a.nicdark_tooltip_jquery.nicdark_position_absolute.nicdark_right_0(title='Add To Compare', href='#')
-                            img.nicdark_margin_right_20.nicdark_right_0(alt='', width='25', src='images/icons/icon-compare-white.svg')
+                        
                           .nicdark_position_absolute.nicdark_bottom_20
                             .nicdark_display_table.nicdark_float_left
                               img.nicdark_margin_right_10.nicdark_margin_left_20.nicdark_display_table_cell.nicdark_vertical_align_middle(alt='', width='20', src='images/icons/icon-clock.svg')
@@ -38,18 +39,14 @@ block content
                             | Es el curso perfecto para iniciarse en el mundo de la programacion. Esta orientada a niños y jovenes creativos con imaginacion y a las que les guste la tecnologia
                             | Podran a través de pseudocodigo aprender a crear estructuras secuenciales, repetitivas.
                       .nicdark_section.nicdark_padding_20.nicdark_box_sizing_border_box.nicdark_bg_grey.nicdark_border_top_1_solid_grey
-                        .nicdark_width_33_percentage.nicdark_width_50_percentage_all_iphone.nicdark_display_none_all_iphone.nicdark_float_left
+                        .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_display_none_all_iphone.nicdark_float_left
                           .nicdark_display_table.nicdark_float_left
-                            img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_border_radius_100_percentage(alt='', width='25', src='img/adelio.JPG')
+                            img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_border_radius_100_percentage(alt='', width='25', src='images/icons/icon-comments.svg')
                             p.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_font_size_15
-                              a(href='#') Adelio
-                        .nicdark_width_33_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left
-                          .nicdark_display_table.nicdark_float_left
-                            img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle(alt='', width='23', src='images/icons/icon-availability.svg')
-                            p.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_font_size_15
-                              a(href='#') 70 Personas
-                        .nicdark_width_33_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left.nicdark_text_align_right
-                          a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='#') SUSCRIBIR
+                              a(href='/entretenimiento/informacion_nivel_basico') Ver Detalle
+                        
+                        .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left.nicdark_text_align_right
+                          a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='/basico') IR
                 .nicdark_width_33_percentage.nicdark_width_100_percentage_responsive.nicdark_float_left.card-1
                     .nicdark_section.nicdark_padding_15.nicdark_box_sizing_border_box
                       // start preview
@@ -58,10 +55,7 @@ block content
                         .nicdark_section.nicdark_position_relative
                           img.nicdark_section(alt='', src='/images/secuen2.jpg')
                           .nicdark_bg_greydark_alpha_gradient_2.nicdark_position_absolute.nicdark_left_0.nicdark_height_100_percentage.nicdark_width_100_percentage.nicdark_padding_20.nicdark_box_sizing_border_box
-                            a.nicdark_tooltip_jquery.nicdark_position_absolute.nicdark_right_0(title='Add To Favorities', href='#')
-                              img.nicdark_margin_right_60(alt='', width='25', src='images/icons/icon-heart-white.svg')
-                            a.nicdark_tooltip_jquery.nicdark_position_absolute.nicdark_right_0(title='Add To Compare', href='#')
-                              img.nicdark_margin_right_20.nicdark_right_0(alt='', width='25', src='images/icons/icon-compare-white.svg')
+                            
                             .nicdark_position_absolute.nicdark_bottom_20
                               .nicdark_display_table.nicdark_float_left
                                 img.nicdark_margin_right_10.nicdark_margin_left_20.nicdark_display_table_cell.nicdark_vertical_align_middle(alt='', width='20', src='images/icons/icon-clock.svg')
@@ -78,18 +72,14 @@ block content
                               br
                               | Podran a través de pseudocodigo aprender a crear funciones. A través de un video juego que ejecutara las instrucciones escritas.
                         .nicdark_section.nicdark_padding_20.nicdark_box_sizing_border_box.nicdark_bg_grey.nicdark_border_top_1_solid_grey
-                          .nicdark_width_33_percentage.nicdark_width_50_percentage_all_iphone.nicdark_display_none_all_iphone.nicdark_float_left
+                          .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_display_none_all_iphone.nicdark_float_left
                             .nicdark_display_table.nicdark_float_left
-                              img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_border_radius_100_percentage(alt='', width='25', src='img/ely.JPG')
+                              img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_border_radius_100_percentage(alt='', width='25', src='images/icons/icon-comments.svg')
                               p.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_font_size_15
-                                a Ely Ann
-                          .nicdark_width_33_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left
-                            .nicdark_display_table.nicdark_float_left
-                              img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle(alt='', width='23', src='images/icons/icon-availability.svg')
-                              p.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_font_size_15
-                                a 70 Personas
-                          .nicdark_width_33_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left.nicdark_text_align_right
-                            a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='') SUSCRIBIR
+                                a(href='/entretenimiento/informacion_nivel_intermedio') Ver Detalle
+                         
+                          .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left.nicdark_text_align_right
+                            a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='/Intermedio') IR
                 .nicdark_width_33_percentage.nicdark_width_100_percentage_responsive.nicdark_float_left.card-1
                 
                  
@@ -100,10 +90,7 @@ block content
                       .nicdark_section.nicdark_position_relative
                         img.nicdark_section(alt='', src='/images/secuen2.jpg')
                         .nicdark_bg_greydark_alpha_gradient_2.nicdark_position_absolute.nicdark_left_0.nicdark_height_100_percentage.nicdark_width_100_percentage.nicdark_padding_20.nicdark_box_sizing_border_box
-                          a.nicdark_tooltip_jquery.nicdark_position_absolute.nicdark_right_0(title='Add To Favorities', href='#')
-                            img.nicdark_margin_right_60(alt='', width='25', src='images/icons/icon-heart-white.svg')
-                          a.nicdark_tooltip_jquery.nicdark_position_absolute.nicdark_right_0(title='Add To Compare', href='#')
-                            img.nicdark_margin_right_20.nicdark_right_0(alt='', width='25', src='images/icons/icon-compare-white.svg')
+                          
                           .nicdark_position_absolute.nicdark_bottom_20
                             .nicdark_display_table.nicdark_float_left
                               img.nicdark_margin_right_10.nicdark_margin_left_20.nicdark_display_table_cell.nicdark_vertical_align_middle(alt='', width='20', src='images/icons/icon-clock.svg')
@@ -119,21 +106,52 @@ block content
                             br
                             | Donde se desarrollaran las siguientes temas.
                       .nicdark_section.nicdark_padding_20.nicdark_box_sizing_border_box.nicdark_bg_grey.nicdark_border_top_1_solid_grey
-                        .nicdark_width_33_percentage.nicdark_width_50_percentage_all_iphone.nicdark_display_none_all_iphone.nicdark_float_left
+                        .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_display_none_all_iphone.nicdark_float_left
                           .nicdark_display_table.nicdark_float_left
-                            img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_border_radius_100_percentage(alt='', width='25', src='img/karla.JPG')
+                            img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_border_radius_100_percentage(alt='', width='25', src='images/icons/icon-comments.svg')
                             p.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_font_size_15
-                              a(href='#') Karla
-                        .nicdark_width_33_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left
-                          .nicdark_display_table.nicdark_float_left
-                            img.nicdark_margin_right_10.nicdark_display_table_cell.nicdark_vertical_align_middle(alt='', width='23', src='images/icons/icon-availability.svg')
-                            p.nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_font_size_15
-                              a(href='#') 70 Personas
-                        .nicdark_width_33_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left.nicdark_text_align_right
-                          a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='#') SUSCRIBIR
+                              a(href='/entretenimiento/informacion_nivel_avanzado') Ver Detalle
+                        
+                        .nicdark_width_50_percentage.nicdark_width_50_percentage_all_iphone.nicdark_float_left.nicdark_text_align_right
+                          a.nicdark_display_inline_block.nicdark_color_white.nicdark_bg_green.nicdark_first_font.nicdark_padding_8.nicdark_border_radius_3.nicdark_font_size_13(href='/avanzado') IR
                 
-        
-        br
-        br
-        br
-        br
+        .nicdark_section.nicdark_height_50
+        .nicdark_section.nicdark_height_50
+
+        .nicdark_section.nicdark_bg_greydark
+          .nicdark_section.nicdark_height_50
+          // start nicdark_container
+          .nicdark_container.nicdark_clearfix
+              .grid.grid_12.nicdark_text_align_center
+                  .nicdark_section
+                      a(href='')
+                          img(alt='', width='200', src='/images/logo2.png')
+                  .nicdark_section.nicdark_height_20
+                  .nicdark_display_inline_block
+                      a(href='')
+                          img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-facebook-circle.svg')
+                      a(href='')
+                          img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-twitter-circle.svg')
+                      a(href='')
+                          img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-pinterest-circle.svg')
+                      a(href='')
+                          img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-linkedin-circle.svg')
+                      a(href='')
+                          img.nicdark_margin_right_10(alt='', width='40', src='/images/icons/icon-youtube-circle.svg')
+          // end container
+          .nicdark_section.nicdark_height_50
+        .nicdark_section.nicdark_bg_greydark
+          // start nicdark_container
+          .nicdark_container.nicdark_clearfix.nicdark_border_top_1_solid_greydark
+              .grid.grid_6.nicdark_text_align_center_responsive
+                  p.nicdark_color_grey.nicdark_font_size_14 © Copyright 2016 Se Declaran Todos los Derechos Reservados Compañia J&C
+              .grid.grid_6.nicdark_text_align_right.nicdark_text_align_center_responsive.nicdark_border_top_1_solid_greydark_responsive.nicdark_display_none_all_iphone
+                  .nicdark_navigation_copyright
+                      ul
+                          li
+                              a(href='/') INICIO
+                          li
+                              a(href='/nosotros') NOSOTROS
+                          li
+                              a(href='/contactanos') CONTACTANOS
+          // end container

@@ -56,7 +56,7 @@ app.use(session({
 
 app.use(flash());
 
-/*
+
 app.use(function(req,res,next){
     //console.log('URL D: ',req.url);
   if (req.url!="/" && req.url!="/nosotros" && req.url!="/contactanos") {
@@ -64,16 +64,15 @@ app.use(function(req,res,next){
      var authorization_token = req.signedCookies.authorization_token;
      console.log('PASA POR AQUI',authorization_token);
 
-    if (!authorization_token) return res.redirect('/')
-    req.headers.token  = authorization_token;
-    req.headers.user   = jwt.decode(authorization_token);
+     if (!authorization_token) return res.redirect('/')
+     req.headers.token  = authorization_token;
+     req.headers.user   = jwt.decode(authorization_token);
 
   }
-  console.log("AHORA NO FUNCIONA d:");
   next();
 
 })
-*/
+
 
 models.User.findOne({
         where:{

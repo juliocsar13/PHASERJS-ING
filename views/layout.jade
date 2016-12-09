@@ -30,119 +30,139 @@ html
         //link(rel='stylesheet', href='/stylesheets/materialize.min.css')
 
         //-link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-    body#start_nicdark_framework
+    body#start_nicdark_framework 
         include profile
         .nicdark_site
           // START nicdark_site_fullwidth
           .nicdark_site_fullwidth.nicdark_site_fullwidth_boxed.nicdark_clearfix
             // START search container
-            .nicdark_display_table.nicdark_transition_all_08_ease.nicdark_navigation_3_search_content.nicdark_bg_greydark_alpha_9.nicdark_position_fixed.nicdark_width_100_percentage.nicdark_height_100_percentage.nicdark_z_index_1_negative.nicdark_opacity_0
+            .nicdark_display_table.nicdark_transition_all_08_ease.nicdark_navigation_2_search_content.nicdark_bg_greydark_alpha_9.nicdark_position_fixed.nicdark_width_100_percentage.nicdark_height_100_percentage.nicdark_z_index_1_negative.nicdark_opacity_0
               // close
-              .nicdark_cursor_zoom_out.nicdark_navigation_3_close_search_content.nicdark_width_100_percentage.nicdark_height_100_percentage.nicdark_position_absolute.nicdark_z_index_1_negative
+              .nicdark_cursor_zoom_out.nicdark_navigation_2_close_search_content.nicdark_width_100_percentage.nicdark_height_100_percentage.nicdark_position_absolute.nicdark_z_index_1_negative
               .nicdark_display_table_cell.nicdark_vertical_align_middle.nicdark_text_align_center
                 .nicdark_width_700.nicdark_width_250_all_iphone.nicdark_display_inline_block
                   .nicdark_width_80_percentage.nicdark_padding_5.nicdark_box_sizing_border_box.nicdark_float_left.nicdark_position_relative
                     input.nicdark_border_width_2.nicdark_background_none.nicdark_border_top_width_0.nicdark_border_right_width_0.nicdark_border_left_width_0.nicdark_first_font.nicdark_color_white.nicdark_placeholder_color_white.nicdark_font_size_30.nicdark_line_height_30(type='text', placeholder='Search')
                   .nicdark_width_20_percentage.nicdark_padding_10.nicdark_box_sizing_border_box.nicdark_float_left.nicdark_position_relative
-                    a.nicdark_width_55.nicdark_height_55.nicdark_display_inline_block.nicdark_text_align_center.nicdark_box_sizing_border_box.nicdark_bg_green.nicdark_padding_15.nicdark_border_radius_3(href='')
-                      img(alt='', width='25', src='images/icons/icon-search-white.svg')
+                    a.nicdark_width_55.nicdark_height_55.nicdark_display_inline_block.nicdark_text_align_center.nicdark_box_sizing_border_box.nicdark_bg_orange.nicdark_padding_15.nicdark_border_radius_3(href='courses.html')
+                      img(alt='', width='25', src='/images/icons/icon-search-white.svg')
             // END search container
             // START menu responsive
-            .nicdark_navigation_3_sidebar_content.nicdark_padding_40.nicdark_box_sizing_border_box.nicdark_overflow_hidden.nicdark_overflow_y_auto.nicdark_transition_all_08_ease.nicdark_bg_green.nicdark_height_100_percentage.nicdark_position_fixed.nicdark_width_300.nicdark_right_300_negative.nicdark_z_index_9
-              img.nicdark_close_navigation_3_sidebar_content.nicdark_cursor_pointer.nicdark_right_20.nicdark_top_20.nicdark_position_absolute(alt='', width='25', src='images/icons/icon-close-white.svg')
-              .nicdark_navigation_3_sidebar
+            .nicdark_navigation_2_sidebar_content.nicdark_padding_40.nicdark_box_sizing_border_box.nicdark_overflow_hidden.nicdark_overflow_y_auto.nicdark_transition_all_08_ease.nicdark_bg_blue.nicdark_height_100_percentage.nicdark_position_fixed.nicdark_width_300.nicdark_right_300_negative.nicdark_z_index_9
+              img.nicdark_close_navigation_2_sidebar_content.nicdark_cursor_pointer.nicdark_right_20.nicdark_top_20.nicdark_position_absolute(alt='', width='25', src='/images/icons/icon-close-white.svg')
+              .nicdark_navigation_2_sidebar
                 ul
                   li
-                        a(href='/') INICIO
-                
+                    a(href='/') INICIO
+                    ul.nicdark_sub_menu
+                      li
+                        a(href='courses.html') 
+                        br
                   li
                     a(href='/nosotros') NOSOTROS
-                
+                    ul.nicdark_sub_menu
+                      li
+                        a(href='courses.html') 
                   li
                     a(href='/contactanos') CONTACTANOS
-                    
+                    ul.nicdark_sub_menu
+                      li
+                        a(href='courses.html') 
+                 
             // END menu responsive
             .nicdark_section
-              .nicdark_section.nicdark_bg_green
+              .nicdark_section.nicdark_bg_greydark
                 // start nicdark_container
                 .nicdark_container.nicdark_clearfix
                   .grid.grid_6.nicdark_padding_botttom_10.nicdark_padding_top_10.nicdark_text_align_center_responsive
-                    .nicdark_navigation_top_header_3
+                        .nicdark_navigation_top_header_2
+                            ul
+                                li
+                                    ul.nicdark_sub_menu
+                                        li
+                                            a(target='_blank', href='https://www.facebook.com/') Facebook
+                                        li
+                                            a(target='_blank', href='https://dribbble.com/') Dribbble
+                                        li
+                                            a(target='_blank', href='https://twitter.com/') Twitter
+                                        li
+                                            a(target='_blank', href='https://www.instagram.com//') Instagram
+                                        li
+                                            a(target='_blank', href='https://www.behance.net/') Behance
+                                    a(target='_blank', href='https://www.facebook.com/')
+                                        img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-facebook-grey.svg')
+                                    a(target='_blank', href='https://twitter.com/')
+                                        img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-twitter-grey.svg')
+                                    a(target='_blank', href='#')
+                                        img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-linkedin-grey.svg')
+                                    a(target='_blank', href='#')
+                                        img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-pinterest-grey.svg')
+                                    a(target='_blank', href='')
+                                        img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='/images/icons/icon-instagram-grey.svg')
+                  .grid.grid_6.nicdark_text_align_right.nicdark_border_top_1_solid_greydark_responsive.nicdark_text_align_center_responsive.nicdark_padding_botttom_10.nicdark_padding_top_10
+                    .nicdark_navigation_top_header_2
                       ul
                         li
-                          ul.nicdark_sub_menu
-                            li
-                              a(target='_blank', href='') Facebook
-                            li
-                              a(target='_blank', href='') Dribbble
-                            li
-                              a(target='_blank', href='') Twitter
-                            li
-                              a(target='_blank', href='') Instagram
-                            li
-                              a(target='_blank', href='') Behance
-                          a(target='_blank', href='')
-                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='images/icons/icon-facebook-white.svg')
-                          a(target='_blank', href='')
-                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='images/icons/icon-twitter-white.svg')
-                          a(target='_blank', href='#')
-                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='images/icons/icon-linkedin-white.svg')
-                          a(target='_blank', href='#')
-                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='images/icons/icon-pinterest-white.svg')
-                          a(target='_blank', href='')
-                            img.nicdark_margin_left_10.nicdark_margin_top_2.nicdark_display_none_all_responsive(alt='', width='12', src='images/icons/icon-instagram-white.svg')
-                  .grid.grid_6.nicdark_text_align_right.nicdark_border_top_1_solid_greendark_responsive.nicdark_text_align_center_responsive.nicdark_padding_botttom_10.nicdark_padding_top_10
-                    .nicdark_navigation_top_header_3
-                      ul
-                        li
-                          img.nicdark_margin_right_10.nicdark_float_left(alt='', width='15', src='images/icons/icon-user-white.svg')
-                          a.nicdark_color_white(href='#',data-toggle='modal')
-                            h1 #{user_}
+                          img.nicdark_margin_right_10.nicdark_float_left(alt='', width='15', src='/images/icons/icon-user-grey.svg')
+                          a(href='#') 
+                          span(style='color:white') #{userCurrent}
+                        
                 // end container
             .nicdark_section.nicdark_position_relative
-              .nicdark_section.nicdark_bg_white
+              .nicdark_section.nicdark_position_absolute
                 // start nicdark_container
                 .nicdark_container.nicdark_clearfix.nicdark_position_relative
                   .grid.grid_12.nicdark_display_none_all_responsive
                     .nicdark_section.nicdark_height_10
                     // LOGO
-                    a(href='/')
-                      img.nicdark_position_absolute.nicdark_left_15.nicdark_top_20(alt='', width='170', src='images/logo1.png')
+                    a(href='index-2.html')
+                      img.nicdark_position_absolute.nicdark_left_15.nicdark_top_20(alt='', width='170', src='/images/logo2.png')
                     // right icons menu
-                    S
-                    .nicdark_navigation_3.nicdark_text_align_right.nicdark_float_right.nicdark_display_none_all_responsive
+                    
+                    // right icons menu
+                    .nicdark_navigation_2.nicdark_text_align_right.nicdark_float_right.nicdark_display_none_all_responsive
                       ul
                         li
-                          a(href='/') INICIO 
-                          ul.nicdark_sub_menu
-                          
+                          a(href='/') INICIO
+                         
                         li
                           a(href='/nosotros') NOSOTROS
-                          ul.nicdark_sub_menu
+                        
                         li
                           a(href='/contactanos') CONTACTANOS
-                          ul.nicdark_sub_menu
-                          
-                          
+                         
+                            
                     .nicdark_section.nicdark_height_10
                   // RESPONSIVE
                   .nicdark_width_50_percentage.nicdark_text_align_center_all_iphone.nicdark_width_100_percentage_all_iphone.nicdark_float_left.nicdark_display_none.nicdark_display_block_responsive
                     .nicdark_section.nicdark_height_20
-                    a(href='')
-                      img(alt='', width='170', src='images/logo1.png')
+                    a(href='index-2.html')
+                      img(alt='', width='170', src='/images/logo2.png')
                   .nicdark_width_50_percentage.nicdark_width_100_percentage_all_iphone.nicdark_float_left.nicdark_display_none.nicdark_display_block_responsive
                     .nicdark_section.nicdark_height_20
                     .nicdark_float_right.nicdark_width_100_percentage.nicdark_text_align_right.nicdark_text_align_center_all_iphone
-                      a.nicdark_open_navigation_3_sidebar_content(href='#')
-                        img.nicdark_margin_right_20(alt='', width='25', src='images/icons/icon-menu-grey.svg')
-                      .nicdark_position_relative.nicdark_display_inline_block
-                        a(href='')
-                          img(alt='', width='25', src='images/icons/icon-cart-grey.svg')
-                        a.nicdark_bg_orange.nicdark_color_white.nicdark_padding_5.nicdark_border_radius_100_percentage.nicdark_font_size_8.nicdark_line_height_5.nicdark_position_absolute.nicdark_left_0.nicdark_top_10_negative.nicdark_margin_left_20(href='#') 2
-                      img.nicdark_margin_left_20.nicdark_navigation_3_open_search_content(alt='', width='25', src='images/icons/icon-search-grey.svg')
-                    .nicdark_section.nicdark_height_20
-                    
-    
+                      a.nicdark_open_navigation_2_sidebar_content(href='#')
+                        img.nicdark_margin_right_20(alt='', width='25', src='/images/icons/icon-menu-white.svg')
+                     
+                  // RESPONSIVE
+                // end container
+            .nicdark_section.nicdark_background_size_cover.nicdark_background_position_center_bottom(style='background-image:url(/images/parallax/img6.jpg);')
+              .nicdark_section.nicdark_bg_greydark_alpha_gradient_2
+                // start nicdark_container
+                .nicdark_container.nicdark_clearfix
+                  .nicdark_section.nicdark_height_200
+                  block content_title
+                  
+                
+                // end container
+            .nicdark_section.nicdark_bg_grey.nicdark_border_bottom_1_solid_grey
+              // start nicdark_container
+              .nicdark_container.nicdark_clearfix
+                .grid.grid_12
+                  a(href='#') INICIO
+                  img.nicdark_margin_left_10.nicdark_margin_right_10(alt='', width='10', src='/images/icons/icon-next-grey.svg')
+                  a(href='#') ENTRETENIMIENTO
+                 
             block content       
     
             script(src='/javascripts/nicdark_plugins.min.js', type='text/javascript')
