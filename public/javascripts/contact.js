@@ -1,5 +1,5 @@
 $(function(){
-
+/*
     var btnContact = $("#btnContact")
 
     $(btnContact).click(sendContact)
@@ -17,6 +17,6 @@ $(function(){
                  console.log("ERROR",err);
              })
      }
-
+*/
 
 })

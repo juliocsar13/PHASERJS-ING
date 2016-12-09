@@ -41,9 +41,11 @@ router.post('/login',function(req,res){
             var _token_  = jwt.decode(token)
 
             var flat = _token_.flat;
-
+            console.log(flat);
             if (!flat) return res.redirect('/')
+            console.log("GUARDANDO COOKIE");
             res.cookie('authorization_token', token, {signed: true });
+            console.log("redireccionando a entretenimiento");
             res.redirect('/entretenimiento');
 
         }
