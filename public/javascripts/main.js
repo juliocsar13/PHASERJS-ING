@@ -93,7 +93,7 @@ function signIn(){
         //return window.location.pathname = '/entrete'
     $.ajax({
         type         : 'POST',
-        url          : 'http://localhost:3000/login/',
+        url          : '/login',
         data         :  data,
         success: function (result) {
             console.log("HOLA",window.location.pathname);
@@ -150,7 +150,7 @@ function SubmitContact(){
 
     $.ajax({
         type        : 'POST',
-        url         : 'http://localhost:3000/contactanos',
+        url         : '/contactanos',
         data        : data,
         success: function (result) {
 
@@ -197,7 +197,7 @@ function SubmitProfile(){
 
     $.ajax({
         type        : 'POST',
-        url         : 'http://localhost:3000/usuarios',
+        url         : '/usuarios',
         data        :  data,
         success:function(result){
 
