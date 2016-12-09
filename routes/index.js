@@ -16,6 +16,10 @@ var middleware        = require('../controllers/middleware')
 var models            = require('../models')
 var config            = require('../config/config_localhost')
 
+/*
+router.route('/login')
+    .get(loginController.login)
+*/
 
 router.post('/login',function(req,res){
     console.log('PASANDO POR EL LOGIN D:');
@@ -45,6 +49,8 @@ router.post('/login',function(req,res){
         }
     })
 })
+
+
 router.route('/')
     .get(loginController.indexView)
 

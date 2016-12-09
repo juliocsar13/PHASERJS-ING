@@ -82,10 +82,8 @@ function signIn(){
     data.email     = $('#emailUserLogIn').val();
     data.password  = $('#passwordUserLogIn').val();
 
-    var data_submit = JSON.stringify(data)
-    console.log(data_submit);
 
-    $.post('/login' , data_submit)
+    $.post('/login' , data)
         .done(function(result){
             console.log("HOLA MUNDO");
             return window.location.pathname = '/entretenimiento'
