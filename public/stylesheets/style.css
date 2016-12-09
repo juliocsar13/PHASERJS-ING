@@ -133,3 +133,14 @@ label#largeFile input#file {
 .footer-container{
     border-top: 1px solid #ddd;
 }
+.form-contact{
+    margin-left:150px;
+    margin-right:150px;
+    margin-bottom:50px;
+    margin-top:20px
+}
+@media (max-width: 600px) {
+  .form-contact {
+      margin: 50px;
+  }
+}
