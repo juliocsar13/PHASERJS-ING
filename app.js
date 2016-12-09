@@ -66,13 +66,13 @@ app.use(function(req,res,next){
 
      if (!authorization_token) return res.redirect('/')
      req.headers.token  = authorization_token;
-     req.headers.user   = jwt.decode(authorization_token);
+     req.headers.user   = jwt.decode(req.headers.token);
      //res.redirect('/entretenimiento')
 
   }
   next();
 
-})
+});
 
 
 models.User.findOne({
