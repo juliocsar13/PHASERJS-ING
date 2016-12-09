@@ -16,8 +16,14 @@ if (!global.hasOwnProperty('db')) {
             protocol  : config_heroku.postgres.protocol,
             port      : config_heroku.postgres.port,
             host      : config_heroku.postgres.host,
-            logging   : true
-        }) 
+            logging   : true,
+            define:{
+                freezeTableName:true,
+                timestamps:false,
+                paranoid: true,
+                underscored: true,
+            },
+        })
 
         global.db = {
         Sequelize: Sequelize,
