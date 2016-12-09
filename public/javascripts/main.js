@@ -86,7 +86,7 @@ function signIn(){
     $.post('/login' , data)
         .done(function(result){
             console.log("HOLA MUNDO");
-            //return window.location.pathname = '/entretenimiento'
+            return window.location.pathname = '/entretenimiento'
             console.log(window.location.pathname);
         })
         return window.location.pathname = '/entretenimiento'
