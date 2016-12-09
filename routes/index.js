@@ -1,5 +1,9 @@
+"use strict"
+
 var express = require('express');
 var router  = express.Router();
+var models            = require('../models')
+var config            = require('../config/config_localhost')
 
 var users             = require('./users')
 var entretenimiento   = require('./entretenimiento')
@@ -13,12 +17,12 @@ var thenController    = require('../controllers/thenController')
 var loginController   = require('../controllers/loginController')
 var middleware        = require('../controllers/middleware')
 
-var models            = require('../models')
-var config            = require('../config/config_localhost')
 
+router.route('/')
+    .get(loginController.indexView)
 
 router.route('/login')
-    .post(loginController.login)
+    .post(loginController.SignIn)
 
 router.use('/entretenimiento',middleware.checkLogin,entretenimiento)
 router.use('/usuarios',middleware.checkLogin,users)
@@ -27,8 +31,6 @@ router.use('/intermedio',middleware.checkLogin,intermediate)
 router.use('/avanzado',middleware.checkLogin,advanced)
 
 
-router.route('/')
-    .get(loginController.indexView)
 
 
 router.route('/nosotros')

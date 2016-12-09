@@ -88,6 +88,7 @@ function signIn(){
             console.log("HOLA MUNDO");
             return window.location.pathname = '/entretenimiento'
         })
+
         //return window.location.pathname = '/entretenimiento'
 /*
     $.ajax({

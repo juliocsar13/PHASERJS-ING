@@ -1,3 +1,5 @@
+"use strict"
+
 var jwt = require('jsonwebtoken');
 var secret = "ilovescotchyscotch";
 
@@ -10,7 +12,7 @@ module.exports.checkLogin = function(req,res,next){
     console.log("DATOS DEL USUARIO",user);
     console.log("TOKEN",token);
     jwt.verify( token, secret, function(err,decoded){
-        if(err) return res.redirect('/login');
+        if(err) return res.redirect('/');
 
     var user_ = req.headers.user.name+' '+ req.headers.user.lastname;
     var role  = req.headers.user.role;

@@ -48,8 +48,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    secure: true,
-    domain:'http://localhost:3000/'
+    secure: true
   }
 
 }));
@@ -58,8 +57,8 @@ app.use(flash());
 
 
 app.use(function(req,res,next){
-    //console.log('URL D: ',req.url);
-  if (req.url!="/" && req.url!="/nosotros" && req.url!="/contactanos") {
+  console.log('URL ',req.url);
+  if (req.url!="/" && req.url!="/nosotros" && req.url!="/contactanos" && req.url!="/stylesheets/bootstrap.min.css.map" && req.url!="/login") {
      console.log('PASA POR AQUI');
      var authorization_token = req.signedCookies.authorization_token;
      console.log('PASA POR AQUI',authorization_token);
