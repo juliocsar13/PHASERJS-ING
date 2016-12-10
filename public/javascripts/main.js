@@ -93,7 +93,7 @@ function signIn(){
 
     $.ajax({
         type         : 'POST',
-        url          : 'http://localhost:3000/login',
+        url          : 'https://funncode.herokuapp.com/login',
         data         :  data,
         success: function (result) {
 
@@ -123,7 +123,7 @@ function signUp(){
     $.ajax({
 
       type          : 'POST',
-      url           : 'http://localhost:3000/usuarios',
+      url           : 'https://funncode.herokuapp.com/usuarios',
       data          : data,
 
       success: function (result) {
