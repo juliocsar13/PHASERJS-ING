@@ -25,10 +25,10 @@ router.route('/login')
     .post(loginController.SignIn)
 
 router.use('/entretenimiento',middleware.checkLogin,entretenimiento)
-router.use('/usuarios',middleware.checkLogin,users)
 router.use('/basico',middleware.checkLogin,basic)
 router.use('/intermedio',middleware.checkLogin,intermediate)
 router.use('/avanzado',middleware.checkLogin,advanced)
+router.use('/usuarios',users)
 
 
 

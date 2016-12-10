@@ -93,7 +93,7 @@ function signIn(){
 
     $.ajax({
         type         : 'POST',
-        url          : 'https://funncode.herokuapp.com/login',
+        url          : 'http://localhost:3000/login',
         data         :  data,
         success: function (result) {
 
@@ -123,11 +123,13 @@ function signUp(){
     $.ajax({
 
       type          : 'POST',
-      url           : 'https://funncode.herokuapp.com/usuarios',
+      url           : 'http://localhost:3000/usuarios',
       data          : data,
 
       success: function (result) {
+          console.log("REGISTRANDO UN USUSARIO");
           $('#ModalRegisterUser').modal('hide');
+          //return window.location.pathname = '/'
       },
       error: function (req, status, err,res) {
             if (err) {

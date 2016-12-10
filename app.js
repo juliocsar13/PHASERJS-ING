@@ -75,6 +75,7 @@ app.use(function(req,res,next){
      //res.redirect('/entretenimiento')
 
   }
+  console.log("pasa directo");
   next();
 
 });
