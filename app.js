@@ -64,7 +64,7 @@ app.use(function(req,res,next){
                    && req.url!="/login"
                    && req.url!="/usuarios"
                    && req.url!="/contactanos") {
-                       
+
      console.log('PASA POR AQUI');
      var authorization_token = req.signedCookies.authorization_token;
      console.log('PASA POR AQUI',authorization_token);
@@ -88,6 +88,7 @@ models.User.findOne({
     }).then(function(user){
 
     if (!user) {
+        console.log("CREANDO USUARIO");
         models.User.create({
 
             nick_name           : 'julito',
