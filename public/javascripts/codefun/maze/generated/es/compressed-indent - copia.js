@@ -1039,11 +1039,11 @@ function Qc() {
             <block type="maze_turn">
                 <field name="DIR">turnRight</field>
             </block>' + (2 < b ? '<block type="maze_forever"></block>' + (6 == b ? '<block type="maze_if"><field name="DIR">isPathLeft</field></block>' : 6 < b ? '<block type="maze_if"></block>' + (8 < b ? '<block type="maze_ifElse"></block>' : "") : "") : "") + "</xml>") + '<div id="blockly"></div><div id="pegmanMenu"></div><div id="dialogShadow" class="dialogAnimate"></div><div id="dialogBorder"></div><div id="dialog"></div><div id="dialogDone" class="dialogHiddenContent"><div style="font-size: large; margin: 1em;">\u00a1Felicitaciones!</div><div id="dialogLinesText" style="font-size: large; margin: 1em;"></div><pre id="containerCode"></pre><div id="dialogDoneText" style="font-size: large; margin: 1em;"></div><div id="dialogDoneButtons" class="farSide" style="padding: 1ex 3ex 0"><button id="doneCancel">No</button><button id="doneOk" class="">Sí</button></div></div><div id="dialogAbort" class="dialogHiddenContent">Este nivel es extremadamente dif\u00edcil. \u00bfDeseas saltearlo e ir al siguiente nivel? Siempre puedes regresar m\u00e1s adelante.<div id="dialogAbortButtons" class="farSide" style="padding: 1ex 3ex 0"><button id="abortCancel">Cancelar</button><button id="abortOk" class="secondary">Aceptar</button></div></div>' +
-        ('<div id="dialogStorage" class="dialogHiddenContent"><div id="containerStorage"></div>' + Kc() + "</div>") + (1 == b ? '<div id="dialogHelpStack" class="dialogHiddenContent"><table><tr><td><img src="javascripts/codefun/common/help.png"></td><td>&nbsp;</td><td>Une un par de bloques \'avanzar\' para ayudarme a llegar a la meta.</td><td valign="top"><img src="maze/help_stack.png" class="mirrorImg" height=63 width=136></td></tr></table></div><div id="dialogHelpOneTopBlock" class="dialogHiddenContent"><table><tr><td><img src="javascripts/codefun/common/help.png"></td><td>&nbsp;</td><td>En este nivel, necesitas unir los bloques en el espacio de trabajo en blanco.<div id="sampleOneTopBlock" class="readonly"></div></td></tr></table></div><div id="dialogHelpRun" class="dialogHiddenContent"><table><tr><td>Ejecuta tu programa para ver qu\u00e9 pasa.</td><td rowspan=2><img src="javascripts/codefun/common/help.png"></td></tr><tr><td><div><img src="maze/help_run.png" class="mirrorImg" height=27 width=141></div></td></tr></table></div>' :
-            2 == b ? '<div id="dialogHelpReset" class="dialogHiddenContent"><table><tr><td>Tu programa no resolvi\u00f3 el laberinto. Presiona "Reiniciar" e intenta otra vez.</td><td rowspan=2><img src="javascripts/codefun/common/help.png"></td></tr><tr><td><div><img src="maze/help_run.png" class="mirrorImg" height=27 width=141></div></td></tr></table></div>' : 3 == b || 4 == b ? (3 == b ? '<div id="dialogHelpRepeat" class="dialogHiddenContent"><table><tr><td><img src="maze/help_up.png"></td><td>Llega al final de este camino usando tan s\u00f3lo dos bloques. Utiliza \'repetir\' para ejecutar un bloque m\u00e1s de una vez.</td><td><img src="javascripts/codefun/common/help.png"></td></tr></table></div>' :
-                "") + '<div id="dialogHelpCapacity" class="dialogHiddenContent"><table><tr><td><img src="javascripts/codefun/common/help.png"></td><td>&nbsp;</td><td>Has usado todos los bloques para este nivel. Para crear un bloque nuevo, primero debes eliminar un bloque existente.</td></tr></table></div><div id="dialogHelpRepeatMany" class="dialogHiddenContent"><table><tr><td><img src="maze/help_up.png"></td><td>Puedes usar m\u00e1s de un bloque dentro de un bloque \'repetir\'.</td><td><img src="javascripts/codefun/common/help.png"></td></tr></table></div>' :
-            5 == b ? '<div id="dialogHelpSkins" class="dialogHiddenContent"><table><tr><td><img src="javascripts/codefun/common/help.png"></td><td width="95%">Elige a tu jugador favorito en este men\u00fa.</td><td><img src="maze/help_up.png"></td></tr></table></div>' : 6 == b ? '<div id="dialogHelpIf" class="dialogHiddenContent"><table><tr><td><img src="maze/help_up.png"></td><td>Un bloque \'si\' har\u00e1 algo solamente si la condici\u00f3n es verdadera. Intenta girar a la izquierda si hay camino a la izquierda.</td><td><img src="javascripts/codefun/common/help.png"></td></tr></table></div>' :
-            7 == b ? '<div id="dialogHelpMenu" class="dialogHiddenContent"><table><tr><td><img src="maze/help_up.png"></td><td id="helpMenuText">Haz clic en %1 en el bloque \'si\' para cambiar su condici\u00f3n.</td><td><img src="javascripts/codefun/common/help.png"></td></tr></table></div>' : 9 == b ? '<div id="dialogHelpIfElse" class="dialogHiddenContent"><table><tr><td><img src="maze/help_down.png"></td><td>Los bloques \'si-sino\' hacen una cosa o la otra.</td><td><img src="javascripts/codefun/common/help.png"></td></tr></table></div>' : 10 == b ? '<div id="dialogHelpWallFollow" class="dialogHiddenContent"><table><tr><td><img src="javascripts/codefun/common/help.png"></td><td>&nbsp;</td><td>\u00bfPuedes resolver este complicado laberinto? Intenta seguir la pared de la izquierda. \u00a1Solo para programadores avanzados!' +
+        ('<div id="dialogStorage" class="dialogHiddenContent"><div id="containerStorage"></div>' + Kc() + "</div>") + (1 == b ? '<div id="dialogHelpStack" class="dialogHiddenContent"><table><tr><td><img src="/javascripts/codefun/common/help.png"></td><td>&nbsp;</td><td>Une un par de bloques \'avanzar\' para ayudarme a llegar a la meta.</td><td valign="top"><img src="/javascripts/codefun/maze/help_stack.png" class="mirrorImg" height=63 width=136></td></tr></table></div><div id="dialogHelpOneTopBlock" class="dialogHiddenContent"><table><tr><td><img src="/javascripts/codefun/common/help.png"></td><td>&nbsp;</td><td>En este nivel, necesitas unir los bloques en el espacio de trabajo en blanco.<div id="sampleOneTopBlock" class="readonly"></div></td></tr></table></div><div id="dialogHelpRun" class="dialogHiddenContent"><table><tr><td>Ejecuta tu programa para ver qu\u00e9 pasa.</td><td rowspan=2><img src="/javascripts/codefun/common/help.png"></td></tr><tr><td><div><img src="/javascripts/codefun/maze/help_run.png" class="mirrorImg" height=27 width=141></div></td></tr></table></div>' :
+            2 == b ? '<div id="dialogHelpReset" class="dialogHiddenContent"><table><tr><td>Tu programa no resolvi\u00f3 el laberinto. Presiona "Reiniciar" e intenta otra vez.</td><td rowspan=2><img src="/javascripts/codefun/common/help.png"></td></tr><tr><td><div><img src="/javascripts/codefun/maze/help_run.png" class="mirrorImg" height=27 width=141></div></td></tr></table></div>' : 3 == b || 4 == b ? (3 == b ? '<div id="dialogHelpRepeat" class="dialogHiddenContent"><table><tr><td><img src="maze/help_up.png"></td><td>Llega al final de este camino usando tan s\u00f3lo dos bloques. Utiliza \'repetir\' para ejecutar un bloque m\u00e1s de una vez.</td><td><img src="/javascripts/codefun/common/help.png"></td></tr></table></div>' :
+                "") + '<div id="dialogHelpCapacity" class="dialogHiddenContent"><table><tr><td><img src="/javascripts/codefun/common/help.png"></td><td>&nbsp;</td><td>Has usado todos los bloques para este nivel. Para crear un bloque nuevo, primero debes eliminar un bloque existente.</td></tr></table></div><div id="dialogHelpRepeatMany" class="dialogHiddenContent"><table><tr><td><img src="maze/help_up.png"></td><td>Puedes usar m\u00e1s de un bloque dentro de un bloque \'repetir\'.</td><td><img src="/javascripts/codefun/common/help.png"></td></tr></table></div>' :
+            5 == b ? '<div id="dialogHelpSkins" class="dialogHiddenContent"><table><tr><td><img src="/javascripts/codefun/common/help.png"></td><td width="95%">Elige a tu jugador favorito en este men\u00fa.</td><td><img src="maze/help_up.png"></td></tr></table></div>' : 6 == b ? '<div id="dialogHelpIf" class="dialogHiddenContent"><table><tr><td><img src="maze/help_up.png"></td><td>Un bloque \'si\' har\u00e1 algo solamente si la condici\u00f3n es verdadera. Intenta girar a la izquierda si hay camino a la izquierda.</td><td><img src="/javascripts/codefun/common/help.png"></td></tr></table></div>' :
+            7 == b ? '<div id="dialogHelpMenu" class="dialogHiddenContent"><table><tr><td><img src="maze/help_up.png"></td><td id="helpMenuText">Haz clic en %1 en el bloque \'si\' para cambiar su condici\u00f3n.</td><td><img src="/javascripts/codefun/common/help.png"></td></tr></table></div>' : 9 == b ? '<div id="dialogHelpIfElse" class="dialogHiddenContent"><table><tr><td><img src="maze/help_down.png"></td><td>Los bloques \'si-sino\' hacen una cosa o la otra.</td><td><img src="/javascripts/codefun/common/help.png"></td></tr></table></div>' : 10 == b ? '<div id="dialogHelpWallFollow" class="dialogHiddenContent"><table><tr><td><img src="/javascripts/codefun/common/help.png"></td><td>&nbsp;</td><td>\u00bfPuedes resolver este complicado laberinto? Intenta seguir la pared de la izquierda. \u00a1Solo para programadores avanzados!' +
             Kc() + "</td></tr></table></div>" : "")
 };
 
@@ -11042,33 +11042,33 @@ Z.Bf = function() {
 };
 var ln = [void 0, Infinity, Infinity, 2, 5, 5, 5, 5, 10, 7, 10][F],
     mn = [{
-        gd: "maze/pegman.png",
-        Tf: "maze/tiles_pegman.png",
-        Be: "maze/marker.png",
+        gd: "/javascripts/codefun/maze/pegman.png",
+        Tf: "/javascripts/codefun/maze/tiles_pegman.png",
+        Be: "/javascripts/codefun/maze/marker.png",
         background: !1,
         wd: !1,
         Af: "#000",
-        Wf: ["maze/win.mp3", "maze/win.ogg"],
-        Ye: ["maze/fail_pegman.mp3", "maze/fail_pegman.ogg"],
+        Wf: ["/javascripts/codefun/maze/win.mp3", "maze/win.ogg"],
+        Ye: ["/javascripts/codefun/maze/fail_pegman.mp3", "maze/fail_pegman.ogg"],
         $d: 1
     }, {
         gd: "maze/astro.png",
         Tf: "maze/tiles_astro.png",
-        Be: "maze/marker.png",
+        Be: "/javascripts/codefun/maze/marker.png",
         background: "maze/bg_astro.jpg",
         wd: !1,
         Af: "#fff",
-        Wf: ["maze/win.mp3", "maze/win.ogg"],
+        Wf: ["/javascripts/codefun/maze/win.mp3", "maze/win.ogg"],
         Ye: ["maze/fail_astro.mp3", "maze/fail_astro.ogg"],
         $d: 2
     }, {
         gd: "maze/panda.png",
         Tf: "maze/tiles_panda.png",
-        Be: "maze/marker.png",
+        Be: "/javascripts/codefun/maze/marker.png",
         background: "maze/bg_panda.jpg",
         wd: !1,
         Af: "#000",
-        Wf: ["maze/win.mp3", "maze/win.ogg"],
+        Wf: ["/javascripts/codefun/maze/win.mp3", "maze/win.ogg"],
         Ye: ["maze/fail_panda.mp3", "maze/fail_panda.ogg"],
         $d: 3
     }],

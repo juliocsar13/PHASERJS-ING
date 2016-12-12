@@ -59,11 +59,11 @@
             <tr>
                 <td>
                     <h1>'+('<span id="title">'+(Tc ? '<a href="index.html?lang='+Dc(a)+'">' : '<a href="./?lang='+Dc(a)+'">') + "Nivel 1 - Laberinto</a> : "+ Dc("Laberinto")+"</span>"),
-                        c = "&skin=" + Dc(c), 
-                        e = " &nbsp; ", 
+                        c = "&skin=" + Dc(c),
+                        e = " &nbsp; ",
                         f = 1; 11 > f; f++) e += " " +
-                        (f == b ? '<span class="level_number level_done" id="level' + Dc(f) + '">' + Dc(f) + "</span>" : 10 == f ? 
-                        '<a class="level_number" id="level' + Dc(f) + '" href="?lang=' + Dc(a) + "&level=" + Dc(f) + Dc(c) + '">' + Dc(f) + "</a>" : 
+                        (f == b ? '<span class="level_number level_done" id="level' + Dc(f) + '">' + Dc(f) + "</span>" : 10 == f ?
+                        '<a class="level_number" id="level' + Dc(f) + '" href="?lang=' + Dc(a) + "&level=" + Dc(f) + Dc(c) + '">' + Dc(f) + "</a>" :
                         '<a class="level_dot" id="level' + Dc(f) + '" href="?lang=' + Dc(a) + "&level=" + Dc(f) + Dc(c) + '"></a>');
                         return d + e + '
                     </h1>
@@ -86,9 +86,9 @@
             </g></svg><div id="capacityBubble">
             <div id="capacity"></div>
         </div>
-        
+
         </div>
-        
+
         <table width="400">
             <tr>
                 <td style="width: 190px; text-align: center; vertical-align: top;">
@@ -138,11 +138,11 @@
             '<div id="dialogHelpStack" class="dialogHiddenContent">
                 <table>
                     <tr>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                         <td>&nbsp;</td>
                         <td>Une un par de bloques \'avanzar\' para ayudarme a llegar a la meta.</td>
                         <td valign="top">
-                            <img src="maze/help_stack.png" class="mirrorImg" height=63 width=136>
+                            <img src="/javascripts/codefun/maze/help_stack.png" class="mirrorImg" height=63 width=136>
                         </td>
                     </tr>
                 </table>
@@ -150,7 +150,7 @@
             <div id="dialogHelpOneTopBlock" class="dialogHiddenContent">
                 <table>
                     <tr>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                         <td>&nbsp;</td>
                         <td>En este nivel, necesitas unir los bloques en el espacio de trabajo en blanco.
                             <div id="sampleOneTopBlock" class="readonly"></div>
@@ -163,12 +163,12 @@
                     <tr>
                         <td>Ejecuta tu programa para ver qu\u00e9 pasa.</td>
                         <td rowspan=2>
-                            <img src="javascripts/codefun/common/help.png">
+                            <img src="/javascripts/codefun/common/help.png">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div><img src="maze/help_run.png" class="mirrorImg" height=27 width=141></div>
+                            <div><img src="/javascripts/codefun/maze/help_run.png" class="mirrorImg" height=27 width=141></div>
                         </td>
                     </tr>
                 </table>
@@ -177,10 +177,10 @@
                 <table>
                     <tr>
                         <td>Tu programa no resolvi\u00f3 el laberinto. Presiona "Reiniciar" e intenta otra vez.</td>
-                        <td rowspan=2><img src="javascripts/codefun/common/help.png"></td>
+                        <td rowspan=2><img src="/javascripts/codefun/common/help.png"></td>
                     </tr>
                     <tr>
-                        <td><div><img src="maze/help_run.png" class="mirrorImg" height=27 width=141></div></td>
+                        <td><div><img src="/javascripts/codefun/maze/help_run.png" class="mirrorImg" height=27 width=141></div></td>
                     </tr>
                 </table>
             </div>' : 3 == b || 4 == b ? (3 == b ?
@@ -189,14 +189,14 @@
                     <tr>
                         <td><img src="maze/help_up.png"></td>
                         <td>Llega al final de este camino usando tan s\u00f3lo dos bloques. Utiliza \'repetir\' para ejecutar un bloque m\u00e1s de una vez.</td>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                     </tr>
                 </table>
             </div>' : "") +
             '<div id="dialogHelpCapacity" class="dialogHiddenContent">
                 <table>
                     <tr>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                         <td>&nbsp;</td>
                         <td>Has usado todos los bloques para este nivel. Para crear un bloque nuevo, primero debes eliminar un bloque existente.</td>
                     </tr>
@@ -207,14 +207,14 @@
                     <tr>
                         <td><img src="maze/help_up.png"></td>
                         <td>Puedes usar m\u00e1s de un bloque dentro de un bloque \'repetir\'.</td>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                     </tr>
                 </table>
             </div>' : 5 == b ?
             '<div id="dialogHelpSkins" class="dialogHiddenContent">
                 <table>
                     <tr>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                         <td width="95%">Elige a tu jugador favorito en este men\u00fa.</td>
                         <td><img src="maze/help_up.png"></td>
                     </tr>
@@ -225,7 +225,7 @@
                     <tr>
                         <td><img src="maze/help_up.png"></td>
                         <td>Un bloque \'si\' har\u00e1 algo solamente si la condici\u00f3n es verdadera. Intenta girar a la izquierda si hay camino a la izquierda.</td>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                     </tr>
                 </table>
             </div>' : 7 == b ?
@@ -234,7 +234,7 @@
                     <tr>
                         <td><img src="maze/help_up.png"></td>
                         <td id="helpMenuText">Haz clic en %1 en el bloque \'si\' para cambiar su condici\u00f3n.</td>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                     </tr>
                 </table>
             </div>' : 9 == b ?
@@ -243,14 +243,14 @@
                     <tr>
                         <td><img src="maze/help_down.png"></td>
                         <td>Los bloques \'si-sino\' hacen una cosa o la otra.</td>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                     </tr>
                 </table>
             </div>' : 10 == b ?
             '<div id="dialogHelpWallFollow" class="dialogHiddenContent">
                 <table>
                     <tr>
-                        <td><img src="javascripts/codefun/common/help.png"></td>
+                        <td><img src="/javascripts/codefun/common/help.png"></td>
                         <td>&nbsp;</td>
                         <td>\u00bfPuedes resolver este complicado laberinto? Intenta seguir la pared de la izquierda. \u00a1Solo para programadores avanzados!'+Kc()+"</td>
                     </tr>

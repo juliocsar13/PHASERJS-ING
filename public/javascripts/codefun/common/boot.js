@@ -13,6 +13,9 @@
   // Load the language pack.
   var script = document.createElement('script');
   script.src = appName + '/public/javascripts/codefun/maze/generated/' + lang + '/compressed-indent.js';
+  script.src = appName + '/public/javascripts/codefun/pond/duck/generated/' + lang + '/compressed-indent.js';
+  script.src = appName + '/public/javascripts/codefun/pond/tutor/generated/' + lang + '/compressed-indent.js';
+
   script.type = 'text/javascript';
   document.head.appendChild(script);
 })();
