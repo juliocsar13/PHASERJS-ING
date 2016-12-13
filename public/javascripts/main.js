@@ -119,7 +119,7 @@ function signUp(){
 
 
 
-    console.log('FECHA DE NACIMIENTO',data)
+    //console.log('FECHA DE NACIMIENTO',data)
     $.ajax({
 
       type          : 'POST',
@@ -127,7 +127,7 @@ function signUp(){
       data          : data,
 
       success: function (result) {
-          console.log("REGISTRANDO UN USUSARIO");
+          //console.log("REGISTRANDO UN USUSARIO");
           $('#ModalRegisterUser').modal('hide');
           //return window.location.pathname = '/'
       },
@@ -152,7 +152,7 @@ function SubmitContact(){
         data        : data,
         success: function (result) {
 
-            console.log('SE REALIZO CON EXITO')
+            //console.log('SE REALIZO CON EXITO')
             //return window.location.pathname = '/contactanos'
         }
     })

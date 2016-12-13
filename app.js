@@ -22,7 +22,7 @@ app.set('view engine', 'jade');
 app.use(function(req, res, next) {
 
   if ('OPTIONS' == req.method) {
-    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Origin', 'https://funncode.herokuapp.com/');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
     res.header('Access-Control-Allow-Headers', '*');
     res.send();
@@ -75,12 +75,11 @@ app.use(function(req,res,next){
      //res.redirect('/entretenimiento')
 
   }
-  console.log("pasa directo");
   next();
 
 });
 
-
+/*
 models.User.findOne({
         where:{
             email:'julcsar13@gmail.com'
@@ -111,7 +110,7 @@ models.User.findOne({
     }
 })
 
-
+*/
 app.use('/', index);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
