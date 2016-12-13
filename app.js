@@ -22,7 +22,7 @@ app.set('view engine', 'jade');
 app.use(function(req, res, next) {
 
   if ('OPTIONS' == req.method) {
-    res.header('Access-Control-Allow-Origin', 'https://funncode.herokuapp.com/');
+    res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
     res.header('Access-Control-Allow-Headers', '*');
     res.send();

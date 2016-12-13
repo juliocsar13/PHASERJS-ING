@@ -96,7 +96,7 @@ function signIn(){
         url          : 'https://funncode.herokuapp.com/login',
         data         :  data,
         headers      : {
-                        'Access-Control-Allow-Origin':'https://funncode.herokuapp.com/'
+                        'Access-Control-Allow-Origin':'*'
         },
 
         success: function (result) {
@@ -130,7 +130,7 @@ function signUp(){
       url           : 'https://funncode.herokuapp.com/usuarios',
       data          : data,
       headers       : {
-                      'Access-Control-Allow-Origin':'https://funncode.herokuapp.com/'
+                      'Access-Control-Allow-Origin':'*'
       },
 
       success: function (result) {
@@ -158,7 +158,7 @@ function SubmitContact(){
         url         : 'https://funncode.herokuapp.com/contactanos',
         data        : data,
         headers     : {
-                        'Access-Control-Allow-Origin':'https://funncode.herokuapp.com/'
+                        'Access-Control-Allow-Origin':'*'
         },
         success: function (result) {
 
@@ -178,7 +178,7 @@ function getProfile(){
         url         : 'https://funncode.herokuapp.com/usuarios',
         data        : data,
         headers     : {
-                        'Access-Control-Allow-Origin':'https://funncode.herokuapp.com/'
+                        'Access-Control-Allow-Origin':'*'
         },
         success: function (result) {
 
@@ -211,7 +211,7 @@ function SubmitProfile(){
         url         : 'https://funncode.herokuapp.com/usuarios',
         data        :  data,
         headers     : {
-                        'Access-Control-Allow-Origin':'https://funncode.herokuapp.com/'
+                        'Access-Control-Allow-Origin':'*'
         },
         success:function(result){
 
