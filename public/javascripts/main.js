@@ -98,6 +98,7 @@ function signIn(){
         headers      : {
                         'Access-Control-Allow-Origin':'*'
         },
+        crossDomain:true,
 
         success: function (result) {
 
