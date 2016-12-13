@@ -95,6 +95,10 @@ function signIn(){
         type         : 'POST',
         url          : 'https://funncode.herokuapp.com/login',
         data         :  data,
+        headers      : {
+                        'Access-Control-Allow-Origin':'*'
+        },
+
         success: function (result) {
 
             return window.location.pathname = '/entretenimiento'
@@ -125,6 +129,9 @@ function signUp(){
       type          : 'POST',
       url           : 'https://funncode.herokuapp.com/usuarios',
       data          : data,
+      headers       : {
+                      'Access-Control-Allow-Origin':'*'
+      },
 
       success: function (result) {
           //console.log("REGISTRANDO UN USUSARIO");
@@ -150,6 +157,9 @@ function SubmitContact(){
         type        : 'POST',
         url         : 'https://funncode.herokuapp.com/contactanos',
         data        : data,
+        headers     : {
+                        'Access-Control-Allow-Origin':'*'
+        },
         success: function (result) {
 
             //console.log('SE REALIZO CON EXITO')
@@ -167,6 +177,9 @@ function getProfile(){
         type        : 'GET'+id,
         url         : 'https://funncode.herokuapp.com/usuarios',
         data        : data,
+        headers     : {
+                        'Access-Control-Allow-Origin':'*'
+        },
         success: function (result) {
 
             $('#idProfile_').val(result.id)
@@ -197,6 +210,9 @@ function SubmitProfile(){
         type        : 'POST',
         url         : 'https://funncode.herokuapp.com/usuarios',
         data        :  data,
+        headers     : {
+                        'Access-Control-Allow-Origin':'*'
+        },
         success:function(result){
 
         }
