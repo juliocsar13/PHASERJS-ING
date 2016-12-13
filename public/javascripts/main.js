@@ -96,7 +96,7 @@ function signIn(){
         url          : 'https://funncode.herokuapp.com/login',
         data         :  data,
         headers      : {
-                        'Access-Control-Allow-Origin':'*'
+                        'Access-Control-Allow-Origin':'https://funncode.herokuapp.com/'
         },
 
         success: function (result) {
@@ -130,7 +130,7 @@ function signUp(){
       url           : 'https://funncode.herokuapp.com/usuarios',
       data          : data,
       headers       : {
-                      'Access-Control-Allow-Origin':'*'
+                      'Access-Control-Allow-Origin':'https://funncode.herokuapp.com/'
       },
 
       success: function (result) {
