@@ -79,7 +79,7 @@ app.use(function(req,res,next){
 
 });
 
-
+/*
 models.User.findOne({
         where:{
             email:'julcsar13@gmail.com'
@@ -110,7 +110,7 @@ models.User.findOne({
     }
 })
 
-
+*/
 app.use('/', index);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

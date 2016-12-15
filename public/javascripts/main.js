@@ -93,7 +93,7 @@ function signIn(){
 
     $.ajax({
         type         : 'POST',
-        url          : 'https://funncode.herokuapp.com/login',
+        url          : '/login',
         data         :  data,
         headers      : {
                         'Access-Control-Allow-Origin':'*'
@@ -128,7 +128,7 @@ function signUp(){
     $.ajax({
 
       type          : 'POST',
-      url           : 'https://funncode.herokuapp.com/usuarios',
+      url           : '/usuarios',
       data          : data,
       headers       : {
                       'Access-Control-Allow-Origin':'*'
@@ -156,7 +156,7 @@ function SubmitContact(){
 
     $.ajax({
         type        : 'POST',
-        url         : 'https://funncode.herokuapp.com/contactanos',
+        url         : '/contactanos',
         data        : data,
         headers     : {
                         'Access-Control-Allow-Origin':'*'
@@ -176,7 +176,7 @@ function getProfile(){
 
     $.ajax({
         type        : 'GET'+id,
-        url         : 'https://funncode.herokuapp.com/usuarios',
+        url         : '/usuarios',
         data        : data,
         headers     : {
                         'Access-Control-Allow-Origin':'*'
@@ -209,7 +209,7 @@ function SubmitProfile(){
 
     $.ajax({
         type        : 'POST',
-        url         : 'https://funncode.herokuapp.com/usuarios',
+        url         : '/usuarios',
         data        :  data,
         headers     : {
                         'Access-Control-Allow-Origin':'*'
