@@ -16,7 +16,7 @@ module.exports.checkLogin = function(req,res,next){
 
     var user_ = req.headers.user.name+' '+ req.headers.user.lastname;
     var role  = req.headers.user.role;
-    
+
 
 
     res.locals.userCurrent  = user_;

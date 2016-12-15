@@ -53,5 +53,6 @@ module.exports.SignUp = function(req,res){
 }
 
 module.exports.indexView = function(req,res){
+    //console.log("MADANDO EL HERADEMFASNFMLKSDFNLAKSDN",req.headers.user.flat);
     return res.render('general')
 }

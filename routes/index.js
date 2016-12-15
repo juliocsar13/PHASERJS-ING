@@ -10,6 +10,7 @@ var entretenimiento   = require('./entretenimiento')
 var basic             = require('./basic_level')
 var intermediate      = require('./intermediate_level')
 var advanced          = require('./advanced_level')
+var nivel             = require('./nivel')
 var jwt               = require('jsonwebtoken')
 
 var contactController = require('../controllers/contactController')
@@ -29,6 +30,7 @@ router.use('/basico',middleware.checkLogin,basic)
 router.use('/intermedio',middleware.checkLogin,intermediate)
 router.use('/avanzado',middleware.checkLogin,advanced)
 router.use('/usuarios',users)
+router.use('/nivel_de_prueba',nivel)
 
 
 

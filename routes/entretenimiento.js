@@ -17,4 +17,5 @@ router.route('/informacion_nivel_intermedio')
 
 router.route('/informacion_nivel_avanzado')
     .get(entretenimientoController.indexViewDetailAdvance)
+
 module.exports = router;
